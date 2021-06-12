@@ -9,7 +9,7 @@ collections:
   games:
     output: true
   game_years:
-    otuput: true
+    output: true
 
 defaults:
   - scope:

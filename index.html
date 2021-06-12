@@ -14,50 +14,34 @@
     </div>
 </div>
 
+{% assign game = site.games | last %}
+{% if game %}
 <h2>最新の試合結果</h2>
 <p>
-    TODO.
-
-    {% assign latest_game = site.games | first %}
-    {{ latest_game.url }}
+    <a href="{{ game.url }}">{{ game.date | date: "%Y年%m月%d日" }}</a><br />
+    都立西高 {{ game.our_score }} - {{ game.vs_score }} {{ game.vs }}
 </p>
+{% endif %}
 
+{% assign gameyear = site.game_years | last %}
+<a href="{{ gameyear.url }}">{{ gameyear.year }}年 {{ gaemyear.title }}</a>
+
+{% assign post = site.posts | first %}
+{% if post %}
 <h2>NEWS</h2>
 <p>
-    {% assign latest_post = site.posts | first %}
-    <a href="{{ latest_post.url }}">{{ latest_post.title }}</a> ({{ latest_post.date | date: "%Y年%m月%d日" }}) <br />
-    {{ latest_post.excerpt }}
+    <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y年%m月%d日" }}) <br />
+    {{ post.excerpt }}
 </p>
+{% endif %}
 
-<!-- TODO FIXME use ccs below styling. -->
-<br />
-
-<br />
-
+<h2>SNS</h2>
 <div style="display: flex; flex-wrap: nowrap;">
-    <div style="width: 320px;">
-        <!-- twitter -->
-        <a class="twitter-timeline" data-lang="ja" data-width="320" data-height="450"
-            href="https://twitter.com/nishi__owls?ref_src=twsrc%5Etfw">Tweets by nishi__owls</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div style="width:100%"><a
+            href="https://www.facebook.com/%E9%83%BD%E7%AB%8B%E8%A5%BF%E9%AB%98OWLS-199121000156356">公式Facebook</a>
     </div>
-    <div style="width: 320px;">
-        <!-- facebook -->
-        <div class="fb-page"
-            data-href="https://www.facebook.com/%E9%83%BD%E7%AB%8B%E8%A5%BF%E9%AB%98OWLS-199121000156356"
-            data-tabs="timeline" data-width="320" data-height="450" data-small-header="true"
-            data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-            <blockquote cite="https://www.facebook.com/%E9%83%BD%E7%AB%8B%E8%A5%BF%E9%AB%98OWLS-199121000156356"
-                class="fb-xfbml-parse-ignore"><a
-                    href="https://www.facebook.com/%E9%83%BD%E7%AB%8B%E8%A5%BF%E9%AB%98OWLS-199121000156356">都立西高OWLS</a>
-            </blockquote>
-        </div>
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous"
-            src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v11.0" nonce="SZ7KEgMM"></script>
-    </div>
-    <div style="width: 320px;">
-        <!-- Instagram -->
-        TODO インスタ https://www.instagram.com/nishi_owls/
-    </div>
+    <div style="width:100%"><a href="https://twitter.com/nishi__owls">公式Twitter</a></div>
+    <div style="width:100%"><a href="https://www.instagram.com/nishi_owls/">公式Instagram</a></div>
+</div>
+
 </div>
