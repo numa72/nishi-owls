@@ -16,7 +16,22 @@ title:
     </div>
 </div>
 
-最新の試合結果：
+<h2>最新の試合結果</h2>
+<p>
+    TODO.
+</p>
+
+<h2>NEWS</h2>
+<p>
+    {% assign latest_post = site.posts | first %}
+    <a href="{{ latest_post.url }}">{{ latest_post.title }}</a> ({{ latest_post.date | date: "%Y年%m月%d日" }}) <br />
+    {{ latest_post.excerpt }}
+</p>
+
+<!-- TODO FIXME use ccs below styling. -->
+<br />
+
+<br />
 
 <div style="display: flex; flex-wrap: nowrap;">
     <div style="width: 320px;">
