@@ -1,14 +1,16 @@
-<img src="/assets/images/logo.png" height="120" alt=OWLS">OWLS 都立西高校アメリカンフットボール部<br />
+<header>
+    <img src="/assets/images/logo.png" height="100" alt=OWLS"><span class="owls">OWLS</span> 都立西高校アメリカンフットボール部<br />
+</header>
+
 <nav id="navbar">
     <ul id="menu">
         {% for item in site.data.navigation %}
-        <li><a href="{{ item.link }}" {% if page.url==item.link %}class="current" {% endif %}>{{ item.name }}</a>
+        <li><a href="{{ item.link }}">{{ item.name }}</a>
             {% if item.subitems %}
             <ul class="sub">
                 {% for subitem in item.subitems %}
-                <li><a href="{{ subitem.link }}" {% if page.url==subitem.link %}class="current" {% endif %}>{{
-                        subitem.name }}</a>
-                    {% endfor %}
+                <li><a href="{{ subitem.link }}">{{ subitem.name }}</a></li>
+                {% endfor %}
             </ul>
             {% endif %}
         </li>

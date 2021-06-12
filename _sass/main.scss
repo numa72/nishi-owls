@@ -5,6 +5,23 @@
   font-size: 100%;
 }
 
-.current {
-  font-weight: bold;
+header {
+  .owls {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 60px;
+  }
+  font-size: 45px;
+}
+
+#footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #701301;
+  color: #f9eec4;
+  text-align: center;
+  font-size: 85%;
+
+  a {
+    color: white;
+  }
 }

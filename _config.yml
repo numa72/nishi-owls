@@ -11,11 +11,12 @@ plugins:
   - jekyll-seo-tag
 
 exclude:
+  - assets_data/
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - README.md
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - README.md
