@@ -7,7 +7,7 @@ $sub-item-height: 40px;
 }
 
 #menu {
-    width: $main-width;
+    max-width: $main-width;
     margin-left: auto;
     margin-right: auto;
     background: #701301;
@@ -48,6 +48,7 @@ $sub-item-height: 40px;
         ul.sub {
             position: absolute;
             width: 100%;
+            z-index: 1;
 
             li {
                 background: none;
@@ -56,6 +57,7 @@ $sub-item-height: 40px;
                 height: $sub-item-height;
                 width: 100%;
                 z-index: 1;
+                opacity: 0.85;
 
                 a {
                     display: block;

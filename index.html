@@ -2,7 +2,21 @@
 layout: default
 title:
 ---
-Hello World!
+
+<script type="text/javascript" src="/assets/js/slide.js"></script>
+<div id="slideGalley">
+    <ul class="slide">
+        {% for item in site.data.slide %}
+        <li><img src="/assets/images/{{ item.url }}" alt=""></li>
+        {% endfor %}
+    </ul>
+    <div class="nav">
+        <img src="/assets/images/nav_prev.png" class="prev">
+        <img src="/assets/images/nav_next.png" class="next">
+    </div>
+</div>
+
+最新の試合結果：
 
 <div style="display: flex; flex-wrap: nowrap;">
     <div style="width: 320px;">

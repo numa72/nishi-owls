@@ -1,0 +1,42 @@
+#slideGalley {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .slide {
+        width: 10000px;
+
+        li {
+            float: left;
+        }
+    }
+
+    .nav {
+        display: none;
+
+        .prev {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            margin-top: -50px;
+        }
+        .next {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -50px;
+        }
+        img {
+            height: auto;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 1079px) {
+    #nav img {
+        max-width: 100%;
+        height: auto;
+    }
+}
