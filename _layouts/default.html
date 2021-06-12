@@ -6,10 +6,10 @@
     <!-- Adding this temporary while development -->
     <meta name="robots" content="noindex, nofollow" />
 
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{{ page.title }}{% if page.url != "/" %} | {% endif %}{{ site.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     {% feed_meta %}
-    {% seo %}
+    {% seo title=false %}
   </head>
   <body>
     {% include header.html %}

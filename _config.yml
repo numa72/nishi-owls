@@ -2,6 +2,9 @@ title: OWLS 都立西高校アメリカンフットボール部
 description: 東京都立西高等学校アメリカンフットボール部 OWLS 公式HPです。試合情報、OB・OGの情報などを発信しています。
 lang:  ja_JP
 
+twitter:
+  username: nishi__owls
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
