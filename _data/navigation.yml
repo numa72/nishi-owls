@@ -1,6 +1,24 @@
 - name: Home
   link: /
-- name: Team
-  link: /team.html
-- name: Blog
+- name: チーム
+  link: /team/
+  subitems:
+    - name: チーム紹介
+      link: /team/about.html
+    - name: 選手一覧
+      link: /team/members.html
+    - name: スタッフ
+      link: /team/coaches.html
+- name: 試合
+  link: /games/
+- name: ブログ
   link: /blog.html
+- name: 部員募集
+  link: /recruiting/
+  subitems:
+    - name: メッセージ
+      link: /recruiting/message.html
+    - name: FAQ
+      link: /recruiting/faq.html
+    - name: OBOGの活躍
+      link: /recruiting/obog.html
