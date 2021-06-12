@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<h1>{{ page.game_name }} - vs. {{ page.vs }}</h1>
+<p>{{ page.date | date: "%Y年%m月%d日" }} {{page.start_at}} at {{page.place}}</p>
+<table>
+    <tr>
+        <td>-</td>
+        {% for _ in page.our_scores %}
+        <td>{{ forloop.index | plus: 1 }}Q</td>
+        {% endfor %}
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>都立西高校 OWLS</td>
+        {% for score in page.our_scores %}
+        <td>{{ score }}</td>
+        {% endfor %}
+        <td>{{ page.our_score }}</td>
+    </tr>
+    <tr>
+        <td>{{ page.vs_full }}</td>
+        {% for score in page.vs_scores %}
+        <td>{{ score }}</td>
+        {% endfor %}
+        <td>{{ page.vs_score }}</td>
+    </tr>
+</table>
+
+{{ content }}

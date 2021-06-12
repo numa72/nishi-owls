@@ -1,6 +1,4 @@
 ---
-layout: default
-title:
 ---
 
 <script type="text/javascript" src="/assets/js/slide.js"></script>
@@ -19,6 +17,9 @@ title:
 <h2>最新の試合結果</h2>
 <p>
     TODO.
+
+    {% assign latest_game = site.games | first %}
+    {{ latest_game.url }}
 </p>
 
 <h2>NEWS</h2>

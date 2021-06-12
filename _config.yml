@@ -5,6 +5,33 @@ lang: ja_JP
 twitter:
   username: nishi__owls
 
+collections:
+  games:
+    output: true
+  game_years:
+    otuput: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "games"
+    values:
+      layout: "game"
+  - scope:
+      path: ""
+      type: "game_years"
+    values:
+      layout: "game_year"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
