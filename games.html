@@ -1,0 +1,14 @@
+---
+---
+<h1>最新の試合結果一覧</h1>
+
+{% assign latest_year = site.game_years | last %}
+{% include game_year_base.html year=latest_year.year %}
+
+<h2>過去の試合結果</h2>
+
+<ul>
+    {% for year in site.game_years reversed %}
+    <li><a href="{{ year.url }}">{{ year.year }}年</a></li>
+    {% endfor %}
+</ul>

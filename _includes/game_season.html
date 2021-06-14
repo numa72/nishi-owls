@@ -1,0 +1,8 @@
+<h2>{{ include.title }}</h2>
+{% for game in include.games %}
+<!-- TODO maybe we can share the same layout used in other pages -->
+<p>
+    <a href="{{ game.url }}">{{ game.date | date: "%Y年%m月%d日" }}<br />
+        都立西高 {{ game.our_score }} - {{ game.vs_score }} {{ game.vs }}</a>
+</p>
+{% endfor %}

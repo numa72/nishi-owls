@@ -3,39 +3,6 @@ layout: default
 ---
 <h1>{{ page.year }}年の試合結果一覧</h1>
 
-<!-- filter by year from all games. -->
-{% assign games = "" | split: "" %}
-{% for game in site.games %}
-<!-- extract year and make it number -->
-{% assign year = game.date | date : "%Y" | plus: 0 %}
-{% if year == page.year %}
-{% assign games = games | push: game %}
-{% endif %}
-{% endfor %}
-
-{% assign games_spring = games | where: "season", "spring" | reverse %}
-{% assign games_fall = games | where: "season", "fall" | reverse %}
-
-<!-- TODO make include and do not repeat. -->
-{% if games_fall.size > 0 %}
-<h2>秋季大会</h2>
-{% for game in games_spring %}
-<!-- TODO maybe we can share the same layout used in other pages -->
-<p>
-    <a href="{{ game.url }}">{{ game.date | date: "%Y年%m月%d日" }}</a><br />
-    都立西高 {{ game.our_score }} - {{ game.vs_score }} {{ game.vs }}
-</p>
-{% endfor %}
-{% endif %}
-
-{% if games_spring.size > 0 %}
-<h2>春季大会</h2>
-{% for game in games_spring %}
-<p>
-    <a href="{{ game.url }}">{{ game.date | date: "%Y年%m月%d日" }}</a><br />
-    都立西高 {{ game.our_score }} - {{ game.vs_score }} {{ game.vs }}
-</p>
-{% endfor %}
-{% endif %}
-
 {{ content }}
+
+{% include game_year_base.html year=page.year %}

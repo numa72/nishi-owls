@@ -28,3 +28,9 @@ layout: default
 </table>
 
 {{ content }}
+
+{% assign year = page.date | date : "%Y" | plus: 0 %}
+{% assign gameyear = site.game_years | where: "year", year | first %}
+{% if gameyear %}
+<p><a href="{{ gameyear.url }}">{{ year }}年の試合結果一覧へ戻る</a></p>
+{% endif %}

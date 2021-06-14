@@ -18,13 +18,10 @@
 {% if game %}
 <h2>最新の試合結果</h2>
 <p>
-    <a href="{{ game.url }}">{{ game.date | date: "%Y年%m月%d日" }}</a><br />
-    都立西高 {{ game.our_score }} - {{ game.vs_score }} {{ game.vs }}
+    <a href="{{ game.url }}">{{ game.date | date: "%Y年%m月%d日" }}<br />
+        都立西高 {{ game.our_score }} - {{ game.vs_score }} {{ game.vs }}</a>
 </p>
 {% endif %}
-
-{% assign gameyear = site.game_years | last %}
-<a href="{{ gameyear.url }}">{{ gameyear.year }}年 {{ gaemyear.title }}</a>
 
 {% assign post = site.posts | first %}
 {% if post %}
