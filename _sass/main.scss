@@ -75,3 +75,25 @@ header {
     color: white;
   }
 }
+
+h2 {
+  padding: 10px 25px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #222222;
+  font-size: 110%;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 60%;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #c00000;
+  }
+}

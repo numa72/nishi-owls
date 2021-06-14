@@ -1,36 +1,39 @@
 ---
 layout: default
 ---
-<h1>{{ page.game_name }} - vs. {{ page.vs }}</h1>
-<p>{{ page.date | date: "%Y年%m月%d日" }} {{page.start_at}} at {{page.place}}</p>
-<table>
+<h1>試合結果<br />{{ page.game_name }}</h1>
+<p>{{ page.date | date: "%Y年%m月%d日" }} {{page.start_at}} {% if page.place %}at {{page.place}}{% endif %}</p>
+
+<table class="game-result-detail">
     <tr>
-        <td>-</td>
+        <th></th>
         {% for _ in page.our_scores %}
-        <td>{{ forloop.index }}Q</td>
+        <th>{{ forloop.index }}Q</th>
         {% endfor %}
-        <td>-</td>
+        <th></th>
     </tr>
     <tr>
-        <td>都立西高校 OWLS</td>
+        <th>都立西高校 OWLS</th>
         {% for score in page.our_scores %}
         <td>{{ score }}</td>
         {% endfor %}
-        <td>{{ page.our_score }}</td>
+        <th>{{ page.our_score }}</td>
     </tr>
     <tr>
-        <td>{{ page.vs_full }}</td>
+        <th>{{ page.vs_full }}</th>
         {% for score in page.vs_scores %}
         <td>{{ score }}</td>
         {% endfor %}
-        <td>{{ page.vs_score }}</td>
+        <th>{{ page.vs_score }}</th>
     </tr>
 </table>
 
-{{ content }}
+<div class="game-report-contnt">
+    {{ content }}
+</div>
 
 {% assign year = page.date | date : "%Y" | plus: 0 %}
 {% assign gameyear = site.game_years | where: "year", year | first %}
 {% if gameyear %}
-<p><a href="{{ gameyear.url }}">{{ year }}年の試合結果一覧へ戻る</a></p>
+<p><a href="{{ gameyear.url }}">{{ year }}年の試合結果一覧へ</a></p>
 {% endif %}
