@@ -6,11 +6,55 @@
 }
 
 header {
-  .owls {
-    font-family: "Hammersmith One", sans-serif;
-    font-size: 60px;
+  max-width: $main-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  img {
+    display: block;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
   }
-  font-size: 45px;
+
+  .titles {
+    float: left;
+    padding-top: 10px;
+
+    .title1 {
+      font-family: "Hammersmith One", sans-serif;
+      font-size: 50px;
+      line-height: 50px;
+    }
+    .title2 {
+      padding-left: 5px;
+      font-size: 25px;
+      line-height: 25px;
+    }
+  }
+
+  .socials {
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+
+  a,
+  a:hover,
+  a:visited {
+    color: black;
+    text-decoration: none;
+  }
+
+  &:after {
+    /* clear:both */
+    height: 0;
+    visibility: hidden;
+    content: ".";
+    display: block;
+    clear: both;
+  }
 }
 
 #main {
