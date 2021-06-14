@@ -12,9 +12,11 @@
 {% assign games_fall = games | where: "season", "fall" | reverse %}
 
 {% if games_fall.size > 0 %}
-{% include game_season.html title="秋季大会" games=games_fall %}
+<h2>秋季大会</h2>
+{% include games_list.html games=games_fall %}
 {% endif %}
 
 {% if games_spring.size > 0 %}
-{% include game_season.html title="春季大会" games=games_spring %}
+<h2>春季大会</h2>
+{% include games_list.html games=games_spring %}
 {% endif %}

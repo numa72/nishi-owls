@@ -19,7 +19,7 @@ table.game-result-detail {
     box-sizing: border-box;
     display: table;
     table-layout: fixed;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid #bfbfbf;
     padding: 1.3em 10px;
 
     .game-result-quick-col {
@@ -27,11 +27,15 @@ table.game-result-detail {
         text-align: center;
         vertical-align: middle;
 
-        border-right: 1px solid silver;
+        border-right: 1px solid #bfbfbf;
 
         &:last-child {
             border-right: none;
         }
+    }
+
+    &:nth-child(2n) {
+        background-color: #e7e7e7;
     }
 }
 
