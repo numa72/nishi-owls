@@ -14,6 +14,27 @@ table.game-result-detail {
     }
 }
 
+.game-result-quick {
+    width: 100%;
+    box-sizing: border-box;
+    display: table;
+    table-layout: fixed;
+    border-bottom: 1px solid silver;
+    padding: 1.3em 10px;
+
+    .game-result-quick-col {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+
+        border-right: 1px solid silver;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+}
+
 // Make twitter instagram embededing align center.
 .game-report-contnt {
     .twitter-tweet,

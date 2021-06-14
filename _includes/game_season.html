@@ -1,8 +1,21 @@
 <h2>{{ include.title }}</h2>
 {% for game in include.games %}
 <!-- TODO maybe we can share the same layout used in other pages -->
-<p>
-    <a href="{{ game.url }}">{{ game.date | date: "%Y年%m月%d日" }}<br />
-        都立西高 {{ game.our_score }} - {{ game.vs_score }} {{ game.vs }}</a>
-</p>
+<div class="game-result-quick">
+    <h3 class="game-result-quick-col">{{ game.game_name }}</h3>
+    <div class="game-result-quick-col">
+        {{ game.date | date: "%m月%d日" }} {{ game.start_at }}
+    </div>
+    <div class="game-result-quick-col">
+        {{ game.place }}
+    </div>
+    <div class="game-result-quick-col">
+        {{ game.vs }}
+    </div>
+    <div class="game-result-quick-col">
+        <a href="{{ game.url }}">
+            {% if game.result %}○{% else %}×{% endif %}
+            {{ game.our_score }} - {{ game.vs_score }}</a>
+    </div>
+</div>
 {% endfor %}
