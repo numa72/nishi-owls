@@ -7,7 +7,17 @@
     <!-- Adding this temporary while development -->
     <meta name="robots" content="noindex, nofollow" />
 
-    <title>{{ page.title }}{% if page.url != "/" %} | {% endif %}{{ site.title }}</title>
+    {% assign title = "" %}
+    {% if page.url == "/" %}
+    {% assign title = site.title %}
+    {% elsif page.collection == "games" %}
+    {% assign title = page.date | date: "%-m月%-d日" | append: page.vs | append: "戦 | " | append: site.title %}
+    {% elsif page.collection == "game_years" %}
+    {% assign title = page.year | append: "年の試合結果一覧 | " | append: site.title %}
+    {% else %}
+    {% assign title = page.title | append: " | " | append: site.title %}
+    {% endif %}
+    <title>{{ title }}</title>
     <script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>
 
