@@ -1,4 +1,5 @@
 ---
+title: 試合結果
 ---
 <h1>試合結果</h1>
 
@@ -6,11 +7,17 @@
 
 {% assign games = "" | split: "" %}
 {% for game in site.games reversed %}
-{% if forloop.index <= 3 %}{% assign games=games | push: game %} {% endif %} {% endfor %} {% include games_list.html
-    games=games %} <h2>過去の試合結果</h2>
+{% if forloop.index <= 3 %}{% comment %}>
+</=> fixing HTML formatter... FIXME find better formatter or configuration. {% endcomment %}
+{% assign games=games | push: game %}
+{% endif %}
+{% endfor %}
+{% include games_list.html games=games %}
 
-    <ul>
-        {% for year in site.game_years reversed %}
-        <li><a href="{{ year.url }}">{{ year.year }}年</a></li>
-        {% endfor %}
-    </ul>
+<h2>過去の試合結果</h2>
+
+<ul>
+    {% for year in site.game_years reversed %}
+    <li><a href="{{ year.url }}">{{ year.year }}年</a></li>
+    {% endfor %}
+</ul>
