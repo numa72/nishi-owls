@@ -27,7 +27,9 @@
 
     <link rel="stylesheet" href="/assets/css/styles.css">
     {% feed_meta %}
+    {% if page.url == "/" %}
     {% seo title=false %}
+    {% endif %}
 </head>
 
 <body>
