@@ -1,0 +1,21 @@
+{% assign list = include.list | split: ", " %}
+{% assign num = list | size | divided_by: 2 %}
+<!-- TODO auto generate HOME, design css to match our site. -->
+<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="/">
+            <span itemprop="name">HOME</span>
+        </a>
+        <meta itemprop="position" content="{{ i }}" />
+    </li>
+    {% for i in (1..num) %}
+    {% assign idx = i | plus: i | plus: -2 %}{% assign url = list[idx] %}
+    {% assign idx = i | plus: i | plus: -1 %}{% assign name = list[idx] %}
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="{{ url }}">
+            <span itemprop="name">{{ name }}</span>
+        </a>
+        <meta itemprop="position" content="{{ i }}" />
+    </li>
+    {% endfor %}
+</ol>

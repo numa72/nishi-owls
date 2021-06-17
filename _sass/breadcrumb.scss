@@ -1,0 +1,48 @@
+.breadcrumb {
+    background-color: #191919;
+    line-height: 2em;
+    height: 2em;
+
+    li {
+        position: relative;
+        display: inline-block;
+
+        &:after {
+            content: ">";
+            color: #acacac;
+        }
+
+        &:first-child {
+            background-color: #2d2d2d;
+            padding: 0 0.7em 0;
+            margin-right: 0.4em;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 100%;
+                border-style: solid;
+                border-color: transparent;
+                border-left-color: #2d2d2d;
+                border-width: 14px 12px;
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+
+    a {
+        display: inline-block;
+        padding: 0 3px 0 7px;
+        height: 28px;
+        line-height: 28px;
+        text-decoration: none;
+        font-size: 13px;
+        color: white;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}

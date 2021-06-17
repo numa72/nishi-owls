@@ -1,7 +1,15 @@
 ---
 layout: default
 ---
+
+{% assign year = page.date | date : "%Y" | plus: 0 %}
+{% assign gameyear = site.game_years | where: "year", year | first %}
+{% assign breadlist = "/games.html, 試合結果, " %}
+{% assign breadlist = breadlist | append: gameyear.url | append: ", " | append: year | append: "年の試合結果" %}
+{% include breadcrumb.html list=breadlist %}
+
 <h1>試合結果<br />{{ page.game_name }}</h1>
+
 <p>{{ page.date | date: "%Y年%m月%d日" }} {{page.start_at}} {% if page.place %}at {{page.place}}{% endif %}</p>
 
 <table class="game-result-detail">
@@ -32,8 +40,4 @@ layout: default
     {{ content }}
 </div>
 
-{% assign year = page.date | date : "%Y" | plus: 0 %}
-{% assign gameyear = site.game_years | where: "year", year | first %}
-{% if gameyear %}
 <p><a href="{{ gameyear.url }}">{{ year }}年の試合結果一覧へ</a></p>
-{% endif %}
