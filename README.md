@@ -6,11 +6,6 @@ To run locally:
 (rbenv exec) bundle exec jekyll serve
 ```
 
-# 作業用TODOノート
-
-* breadcrumb.
-  - https://saruwakakun.com/html-css/basic/breadcrumb
-
 # Note of external resources
 
 * Facebook logo (assets/images/facebook.png)

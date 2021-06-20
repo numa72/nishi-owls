@@ -9,8 +9,6 @@
       link: /team/coaches.html
 - name: 試合
   link: /games.html
-- name: ブログ
-  link: /blog.html
 - name: 部員募集
   link: /recruiting/
   subitems:
@@ -20,3 +18,5 @@
       link: /recruiting/faq.html
     - name: OBOGの活躍
       link: /recruiting/obog.html
+- name: ブログ
+  link: /blog.html
