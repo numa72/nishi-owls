@@ -16,6 +16,8 @@
     {% assign title = page.date | date: "%-m月%-d日" | append: page.vs | append: "戦 | " | append: site.title %}
     {% elsif page.collection == "game_years" %}
     {% assign title = page.year | append: "年の試合結果一覧 | " | append: site.title %}
+    {% elsif page.collection == "staffs" %}
+    {% assign title = page.name | append: " （" | append: page.position | append: "） | " | append: site.title %}
     {% else %}
     {% assign title = page.title | append: " | " | append: site.title %}
     {% endif %}

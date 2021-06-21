@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% include breadcrumb.html list="/team/, チーム, /team/staff.html, スタッフ" %}
+
+<h1>{{ page.name }}<br />{{ page.position }}</h1>
+
+<img src="/assets/images/staff/{{ page.photo }}" width=150 alt="顔写真" style="display: block; float: left" />
+
+<dl>
+    {% if page.year %}
+    <dt>年度</dt>
+    <dd>{{ page.year }}</dd>
+    {% endif %}
+    {% if page.play_position %}
+    <dt>主なポジション</dt>
+    <dd>{{ page.play_position }}</dd>
+    {% endif %}
+</dl>
+
+<hr style="clear: both" />
+
+{{ content | markdownify }}
+
+<p><a href="/team/staff.html">スタッフ一覧へ戻る</a></p>

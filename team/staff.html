@@ -1,0 +1,17 @@
+---
+title: スタッフ
+---
+
+{% include breadcrumb.html list="/team/, チーム" %}
+
+<h1>スタッフ</h1>
+
+{% for staff in site.staffs %}
+<div>
+    <a href="{{ staff.url }}">
+        <img src="/assets/images/staff/{{ staff.photo }}" width=150 alt="顔写真" />
+        {{ staff.name }}
+        {{ staff.position }}
+    </a>
+</div>
+{% endfor %}

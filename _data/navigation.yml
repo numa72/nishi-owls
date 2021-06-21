@@ -6,7 +6,7 @@
     - name: 選手一覧
       link: /team/members.html
     - name: スタッフ
-      link: /team/coaches.html
+      link: /team/staff.html
 - name: 試合
   link: /games.html
 - name: 部員募集
