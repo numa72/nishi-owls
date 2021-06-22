@@ -5,7 +5,7 @@
       link: /team/about.html
     - name: 選手一覧
       link: /team/members.html
-    - name: スタッフ
+    - name: コーチ・スタッフ
       link: /team/staff.html
 - name: 試合
   link: /games.html

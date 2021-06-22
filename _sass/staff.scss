@@ -1,0 +1,35 @@
+.staff-head {
+    display: flex;
+
+    img {
+        display: block;
+        flex-grow: 0;
+        margin: 20px;
+    }
+
+    dl {
+        margin: 20px;
+        flex-grow: 1;
+
+        dt {
+            font-weight: bold;
+            margin-top: 10px;
+            border-top: solid 1px silver;
+        }
+
+        dd {
+            padding: 5px;
+
+            &:last-child {
+                padding-bottom: 10px;
+                border-bottom: solid 1px silver;
+            }
+        }
+    }
+
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
