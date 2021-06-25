@@ -1,0 +1,138 @@
+.staff-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .staff-box {
+        width: 50%;
+        min-width: 450px; // FIXME support more small width
+        margin: 0 auto;
+        padding: 10px;
+        box-sizing: border-box;
+
+        .staff-main {
+            display: flex;
+
+            img {
+                display: block;
+                flex-grow: 0;
+                margin: 10px;
+            }
+
+            dl {
+                margin-right: 10px;
+                flex-grow: 1;
+
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+
+                dt,
+                dd {
+                    margin-top: 10px;
+                    border-top: dotted 1px silver;
+                }
+
+                dt:last-of-type,
+                dd:last-of-type {
+                    padding-bottom: 10px;
+                    border-bottom: dotted 1px silver;
+                }
+
+                dt {
+                    width: 40%;
+                    font-weight: bold;
+                }
+
+                dd {
+                    width: 60%;
+                }
+            }
+        }
+
+        .staff-content {
+            p {
+                margin: 0.3em 0;
+                font-size: 90%;
+            }
+
+            h3 {
+                color: #701301;
+            }
+        }
+    }
+}
+
+// FIXME スマホでは縦に配置
+.about-team-box {
+    width: 80%;
+    margin: 20px auto;
+    background: black;
+    color: white;
+
+    display: flex;
+
+    .image-box {
+        width: 60%;
+        aspect-ratio: 2/1; // TODO safari doesn't support it.
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            position: absolute;
+            top: -15%;
+        }
+    }
+
+    .about-text {
+        width: 30%;
+        padding: 40px 5%; // 5% = (100 - 60 (image-box) - 30 (this)) / 2. TODO compute.
+
+        .about-title {
+            font-weight: bold;
+        }
+
+        .about-detail {
+            margin: 15px 0;
+        }
+
+        .about-link {
+            border: solid white 1px;
+            border-radius: 13px;
+            width: 80px;
+            padding-left: 15px;
+
+            &:hover {
+                background-color: #c00000;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                position: relative;
+                font-size: 12px;
+                line-height: 28px;
+
+                &:link,
+                &:visited,
+                &:hover {
+                    color: white;
+                    text-decoration: none;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 8px;
+                    right: 6px;
+                    border-style: solid;
+                    border-color: transparent;
+                    border-left-color: white;
+                    border-width: 5px 10px;
+                    width: 0;
+                    height: 0;
+                }
+            }
+        }
+    }
+}
