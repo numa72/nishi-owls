@@ -10,8 +10,7 @@ title: 試合結果
 
 {% assign games = "" | split: "" %}
 {% for game in site.games reversed %}
-{% if forloop.index <= 3 %}{% comment %}>
-</=> fixing HTML formatter... FIXME find better formatter or configuration. {% endcomment %}
+{% if 3 >= forloop.index %}
 {% assign games=games | push: game %}
 {% endif %}
 {% endfor %}
