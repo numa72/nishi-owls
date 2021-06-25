@@ -6,14 +6,41 @@ title: スタッフ
 
 <h1>コーチ・スタッフ</h1>
 
-{% for staff in site.staffs %}
-<div>
-    <a href="{{ staff.url }}">
-        <img src="/assets/images/staff/{{ staff.photo }}" width=150 alt="顔写真" />
-        {{ staff.name }}
-        {{ staff.position }}
-    </a>
+<div class="staff-list">
+    {% for staff in site.staffs %}
+    <div class="staff-box">
+        <h2>{{ staff.name }} ： {{ staff.position }}</h2>
+        <div class="staff-main">
+            <img src="/assets/images/staff/{{ staff.photo }}" width=150 height=180 alt="顔写真" />
+
+            <dl>
+                {% if staff.year %}
+                <dt>年度</dt>
+                <dd>{{ staff.year }}</dd>
+                {% endif %}
+                {% if staff.play_position %}
+                <dt>現役時ポジション</dt>
+                <dd>{{ staff.play_position }}</dd>
+                {% endif %}
+                {% if staff.univ %}
+                <dt>大学</dt>
+                <dd>{{ staff.univ }}</dd>
+                {% endif %}
+                {% if staff.play_experience %}
+                <dt>選手歴</dt>
+                <dd>{{ staff.play_experience }}</dd>
+                {% endif %}
+                {% if staff.coach_experience %}
+                <dt>指導歴</dt>
+                <dd>{{ staff.coach_experience }}</dd>
+                {% endif %}
+            </dl>
+        </div>
+        <div class="staff-content">
+            {{ staff.content | markdownify | replace: 'h1', 'h3' }}
+        </div>
+    </div>
+    {% endfor %}
 </div>
-{% endfor %}
 
 <p><a href="/team/">チーム紹介へ戻る</a></p>

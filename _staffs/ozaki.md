@@ -4,4 +4,5 @@ photo: ozaki.jpg
 position: 顧問
 year: 日大鶴ケ丘高校xx年卒
 play_position: LB
+univ: 日本大学
 ---

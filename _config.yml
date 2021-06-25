@@ -11,8 +11,7 @@ collections:
   game_years:
     output: true
   staffs:
-    output: true
-    permalink: /team/staff/:name.html
+    output: false
 
 defaults:
   - scope:
@@ -34,11 +33,6 @@ defaults:
       path: ""
     values:
       layout: "default"
-  - scope:
-      path: ""
-      type: "staffs"
-    values:
-      layout: "staff"
 
 plugins:
   - jekyll-feed
