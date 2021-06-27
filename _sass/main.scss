@@ -9,6 +9,7 @@ header {
   max-width: $main-width;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 
   img {
     display: block;
@@ -16,6 +17,12 @@ header {
     margin-top: 5px;
     margin-right: 10px;
     margin-bottom: 5px;
+
+    &#owls-logo {
+      width: 90px; // needed for IE, where min() is not supported.
+      width: min(90px, 15vw);
+      height: auto;
+    }
   }
 
   .titles {
@@ -26,18 +33,30 @@ header {
       font-family: "Hammersmith One", sans-serif;
       font-size: 50px;
       line-height: 50px;
+      font-size: min(50px, 8vw);
+      line-height: min(50px, 8vw);
     }
     .title2 {
-      padding-left: 5px;
       font-size: 25px;
       line-height: 25px;
+      font-size: min(25px, 4vw);
+      line-height: min(25px, 4vw);
     }
   }
 
   .socials {
-    float: right;
-    padding-top: 10px;
-    padding-right: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    right: min(10px, 2vw);
+    top: min(10px, 2vw);
+
+    img {
+      width: min(30px, 6vw);
+      height: auto;
+      margin-top: min(5px, 1vw);
+      margin-right: min(10px, 2vw);
+    }
   }
 
   a,
