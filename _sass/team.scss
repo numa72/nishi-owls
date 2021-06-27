@@ -62,7 +62,6 @@
     }
 }
 
-// FIXME スマホでは縦に配置
 .about-team-box {
     width: 80%;
     margin: 20px auto;
@@ -73,27 +72,30 @@
 
     .image-box {
         width: 60%;
-        aspect-ratio: 2/1; // TODO safari doesn't support it.
-        position: relative;
-        overflow: hidden;
 
         img {
             width: 100%;
-            position: absolute;
-            top: -15%;
+            height: auto;
+            display: block; // avoid extra bottom space. https://stackoverflow.com/questions/5804256
         }
     }
 
     .about-text {
         width: 30%;
-        padding: 40px 5%; // 5% = (100 - 60 (image-box) - 30 (this)) / 2. TODO compute.
+        padding: 0 5%; // 5% = (100 - 60 (image-box) - 30 (this)) / 2. TODO compute.
+
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
 
         .about-title {
             font-weight: bold;
+            width: 100%;
         }
 
         .about-detail {
             margin: 15px 0;
+            width: 100%;
         }
 
         .about-link {
@@ -133,6 +135,37 @@
                     height: 0;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: $max-tablet-width) {
+    .about-team-box {
+        width: 95%;
+        margin: 10px auto;
+
+        .about-text {
+            width: 36%;
+            padding: 0 2%; // 2% = (100 - 60 (image-box) - 36 (this)) / 2. TODO compute.
+            font-size: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: $max-mobile-width) {
+    .about-team-box {
+        width: 95%;
+        margin: 10px auto;
+
+        display: block; // clear flex
+
+        .image-box {
+            width: 100%;
+        }
+
+        .about-text {
+            width: 90%;
+            padding: 20px 5%;
         }
     }
 }

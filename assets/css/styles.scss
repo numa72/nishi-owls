@@ -2,6 +2,8 @@
 ---
 
 $main-width: 1080px;
+$max-mobile-width: 480px;
+$max-tablet-width: 768px;
 
 @import "main";
 @import "navbar";
