@@ -48,3 +48,30 @@ table.game-result-detail {
         margin-right: auto !important;
     }
 }
+
+table.old-game-table {
+    margin: 1em auto;
+
+    td {
+        border-top: 1px solid #ddd;
+        padding: 3px;
+
+        &.col1,
+        &.col2 {
+            text-align: center;
+        }
+        &.col3 {
+            white-space: pre;
+        }
+    }
+
+    tr {
+        &:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        &:hover {
+            background-color: #f3f3f3;
+        }
+    }
+}

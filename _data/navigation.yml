@@ -8,7 +8,7 @@
     - name: コーチ・スタッフ
       link: /team/staff.html
 - name: 試合
-  link: /games.html
+  link: /game/
 - name: 部員募集
   link: /recruiting/
   subitems:

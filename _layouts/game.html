@@ -4,7 +4,7 @@ layout: default
 
 {% assign year = page.date | date : "%Y" | plus: 0 %}
 {% assign gameyear = site.game_years | where: "year", year | first %}
-{% assign breadlist = "/games.html, 試合結果, " %}
+{% assign breadlist = "/game/, 試合結果, " %}
 {% assign breadlist = breadlist | append: gameyear.url | append: ", " | append: year | append: "年の試合結果" %}
 {% include breadcrumb.html list=breadlist %}
 

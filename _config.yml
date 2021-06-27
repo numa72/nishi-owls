@@ -8,8 +8,10 @@ twitter:
 collections:
   games:
     output: true
+    permalink: /game/:year/:name.html
   game_years:
     output: true
+    permalink: /game/:name/index.html
   staffs:
     output: false
 

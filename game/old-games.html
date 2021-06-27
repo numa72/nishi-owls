@@ -1,0 +1,27 @@
+---
+title: 試合結果
+---
+
+{% include breadcrumb.html list="/game/, 試合結果" %}
+
+<h1>過去の試合結果</h1>
+
+<table class="old-game-table">
+    {% for row in site.data.old-games %}
+    {% if forloop.first %}
+    <tr>
+        {% for pair in row %}
+        <th>{{ pair[0] }}</th>
+        {% endfor %}
+    </tr>
+    {% endif %}
+
+    <tr>
+        {% for pair in row %}
+        <td class='col{{ forloop.index }}'>{{ pair[1] }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+<p><a href="/game/">試合結果一覧へ戻る</a></p>
