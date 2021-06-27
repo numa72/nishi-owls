@@ -1,6 +1,8 @@
 {% for game in include.games %}
 <div class="game-result-quick">
-    <h3 class="game-result-quick-col">{{ game.game_name }}</h3>
+    <h3 class="game-result-quick-col">
+        <a href="{{ game.url }}">{{ game.game_name }}</a>
+    </h3>
     <div class="game-result-quick-col">
         {{ game.date | date: "%m月%d日" }} {{ game.start_at }}
     </div>
@@ -8,7 +10,7 @@
         {{ game.place }}
     </div>
     <div class="game-result-quick-col">
-        {{ game.vs }}
+        vs. {{ game.vs }}
     </div>
     <div class="game-result-quick-col">
         <a href="{{ game.url }}">

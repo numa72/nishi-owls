@@ -1,5 +1,3 @@
-$hover-color: rgb(255, 232, 219);
-
 table.game-result-detail {
     // TODO with 100% for start phones.
     font-size: 150%; // no need in start phones, 120% for tablets
@@ -29,14 +27,57 @@ table.game-result-detail {
         vertical-align: middle;
 
         border-right: 1px solid #bfbfbf;
+        box-sizing: border-box;
 
         &:last-child {
             border-right: none;
+        }
+
+        a:any-link {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     }
 
     &:nth-child(2n) {
         background-color: #e7e7e7;
+    }
+}
+
+@media screen and (max-width: $max-mobile-width) {
+    .game-result-quick {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1em 10px 0;
+
+        .game-result-quick-col {
+            padding: 0.2em 0;
+        }
+
+        h3.game-result-quick-col {
+            width: 100%;
+            border-right: none;
+
+            a {
+                display: block;
+                line-height: 120%;
+            }
+        }
+
+        div.game-result-quick-col {
+            width: 50%;
+            border-top: 1px solid #bfbfbf;
+
+            font-size: 90%;
+
+            &:nth-child(odd) {
+                border-right: none;
+            }
+        }
     }
 }
 

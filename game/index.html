@@ -8,6 +8,8 @@ title: 試合結果
 
 <h2>最近の試合</h2>
 
+<p>試合名をクリックしたら詳細が開きます。</p>
+
 {% assign games = "" | split: "" %}
 {% for game in site.games reversed %}
 {% if 3 >= forloop.index %}
