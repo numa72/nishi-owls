@@ -71,11 +71,16 @@ table.game-result-detail {
         div.game-result-quick-col {
             width: 50%;
             border-top: 1px solid #bfbfbf;
+            border-right: none;
 
             font-size: 90%;
 
-            &:nth-child(odd) {
-                border-right: none;
+            // order vertically.
+            &:nth-child(2n) {
+                order: 1;
+            }
+            &:nth-child(2n + 1) {
+                order: 2;
             }
         }
     }
