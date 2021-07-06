@@ -1,15 +1,32 @@
 table.game-result-detail {
-    // TODO with 100% for start phones.
-    font-size: 150%; // no need in start phones, 120% for tablets
+    font-size: 150%;
     margin: auto;
 
     th,
     td {
-        padding-left: 20px; // TODO mabye no need in smart phones and tablets
-        padding-right: 20px; // TODO maybe no need in smart phones and tablets
+        padding-left: 20px;
+        padding-right: 20px;
         text-align: center;
         border-right: 1px solid silver;
         border-bottom: 1px solid silver;
+    }
+}
+
+@media screen and (max-width: $max-tablet-width) {
+    table.game-result-detail {
+        font-size: 120%;
+
+        th,
+        td {
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+    }
+}
+
+@media screen and (max-width: $max-mobile-width) {
+    table.game-result-detail {
+        font-size: 100%;
     }
 }
 
@@ -36,6 +53,8 @@ table.game-result-detail {
         a:any-link {
             color: black;
             text-decoration: none;
+            display: block;
+            width: 100%;
         }
 
         a:hover {

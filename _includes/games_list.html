@@ -13,8 +13,10 @@
         vs. {{ game.vs }}
     </div>
     <div class="game-result-quick-col">
-        {% if game.our_score > game.vs_score %}○{% elsif game.vs_score > game.our_score %}×{% else %}△{% endif %}
-        {{ game.our_score }} - {{ game.vs_score }}
+        <a href="{{ game.url }}">
+            {% if game.our_score > game.vs_score %}○{% elsif game.vs_score > game.our_score %}×{% else %}△{% endif %}
+            {{ game.our_score }} - {{ game.vs_score }}
+        </a>
     </div>
 </div>
 {% endfor %}
