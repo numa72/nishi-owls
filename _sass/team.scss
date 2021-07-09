@@ -169,3 +169,46 @@
         }
     }
 }
+
+.about-team-main-container {
+    &#pride-of-nishi {
+        background-image: url("/assets/images/team/pride-of-nishi-bg.jpg");
+    }
+    &#about-owls {
+        background-image: url("/assets/images/team/about-owls-bg.jpg");
+    }
+    background-color: #222222;
+    background-size: cover;
+    background-position: center;
+
+    padding: 150px 75px;
+
+    color: white;
+    line-height: 2;
+
+    h2 {
+        font-size: 130%;
+
+        // clear default h2 styles
+        background: none;
+        &:before {
+            display: none;
+        }
+    }
+
+    p {
+        font-family: serif;
+    }
+}
+
+@media screen and (max-width: $max-tablet-width) {
+    .about-team-main-container {
+        padding: 100px 50px;
+    }
+}
+
+@media screen and (max-width: $max-mobile-width) {
+    .about-team-main-container {
+        padding: 50px 25px;
+    }
+}
