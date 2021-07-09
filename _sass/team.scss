@@ -4,7 +4,7 @@
 
     .staff-box {
         width: 50%;
-        min-width: 450px; // FIXME support more small width
+        min-width: $max-mobile-width;
         margin: 0 auto;
         padding: 10px;
         box-sizing: border-box;
@@ -57,6 +57,36 @@
 
             h3 {
                 color: #701301;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $max-mobile-width) {
+    .staff-list {
+        .staff-box {
+            min-width: 100%;
+
+            .staff-main {
+                dl {
+                    dd {
+                        margin-top: 0;
+                        border-top: none;
+                    }
+
+                    dt:last-of-type {
+                        padding-bottom: 0;
+                        border-bottom: none;
+                    }
+
+                    dt {
+                        width: 100%;
+                    }
+
+                    dd {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
