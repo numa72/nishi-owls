@@ -7,11 +7,12 @@ title: スタッフ
 <h1>コーチ・スタッフ</h1>
 
 <div class="staff-list">
-    {% for staff in site.staffs %}
+    {% for staff in site.data.staff %}
     <div class="staff-box">
         <h2>{{ staff.name }} ： {{ staff.position }}</h2>
         <div class="staff-main">
-            <img src="/assets/images/staff/{{ staff.photo }}" width=150 height=180 alt="顔写真" />
+            <img src="/assets/images/staff/{% if staff.photo %}{{ staff.photo }}{% else %}no_image.gif{% endif %}"
+                width=150 height=180 alt="顔写真" />
 
             <dl>
                 {% if staff.year %}
@@ -24,17 +25,31 @@ title: スタッフ
                 {% endif %}
                 {% if staff.play_experience %}
                 <dt>選手歴</dt>
-                <dd>{{ staff.play_experience }}</dd>
+                <dd>{{ staff.play_experience | newline_to_br}}</dd>
                 {% endif %}
                 {% if staff.coach_experience %}
                 <dt>指導歴</dt>
-                <dd>{{ staff.coach_experience }}</dd>
+                <dd>{{ staff.coach_experience | newline_to_br }}</dd>
                 {% endif %}
             </dl>
         </div>
+        {% if staff.profile %}
         <div class="staff-content">
-            {{ staff.content | markdownify | replace: 'h1', 'h3' }}
+            <h3>Profile</h3>
+            {% assign lines = staff.profile | newline_to_br | split: '<br />' %}
+            {% for line in lines %}
+            <p>{{line}}</p>
+            {% endfor %}
         </div>
+        {% endif %}{% if staff.message %}
+        <div class="staff-content">
+            <h3>Message</h3>
+            {% assign lines = staff.message | newline_to_br | split: '<br />' %}
+            {% for line in lines %}
+            <p>{{ line }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
     </div>
     {% endfor %}
 </div>

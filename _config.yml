@@ -12,8 +12,6 @@ collections:
   game_years:
     output: true
     permalink: /game/:name/index.html
-  staffs:
-    output: false
 
 defaults:
   - scope:
