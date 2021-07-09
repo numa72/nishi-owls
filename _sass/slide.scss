@@ -8,6 +8,10 @@
 
         li {
             float: left;
+
+            // clear main.css
+            margin: 0 !important;
+            list-style: none !important;
         }
     }
 
