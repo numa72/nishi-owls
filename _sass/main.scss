@@ -80,6 +80,11 @@ header {
   max-width: $main-width;
   margin-left: auto;
   margin-right: auto;
+
+  li {
+    margin: 3px 20px;
+    list-style: disc outside;
+  }
 }
 
 #footer {

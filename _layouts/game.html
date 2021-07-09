@@ -10,7 +10,7 @@ layout: default
 
 <h1>試合結果<br />{{ page.game_name }}</h1>
 
-<p>{{ page.date | date: "%Y年%m月%d日" }} {{page.start_at}} {% if page.place %}at {{page.place}}{% endif %}</p>
+<p>{{ page.date | date: "%Y年%m月%d日" }} {{page.start_at}} {% if page.place %}<br />at {{page.place}}{% endif %}</p>
 
 <table class="game-result-detail">
     <tr>
@@ -37,7 +37,7 @@ layout: default
 </table>
 
 <div class="game-report-contnt">
-    {{ content }}
+    {{ content | markdownify }}
 </div>
 
 <p><a href="{{ gameyear.url }}">{{ year }}年の試合結果一覧へ</a></p>
