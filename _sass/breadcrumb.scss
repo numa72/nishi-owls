@@ -7,6 +7,10 @@
         position: relative;
         display: inline-block;
 
+        // clear main.css
+        margin: 0 !important;
+        list-style: none !important;
+
         &:after {
             content: ">";
             color: #acacac;
