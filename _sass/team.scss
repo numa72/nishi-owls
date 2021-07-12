@@ -242,3 +242,57 @@
         padding: 50px 25px;
     }
 }
+
+.team-history-main-container {
+    h2 {
+        margin: 0;
+        padding: 0;
+        background: none;
+        color: black;
+        font-size: 150%;
+        border-bottom: 3px solid #701301;
+
+        span.year {
+            font-family: serif;
+            font-size: 150%;
+            font-style: italic;
+            padding-right: 10px;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    img {
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+
+    &:nth-child(odd) {
+        background-color: rgb(209, 209, 209);
+        img {
+            float: right;
+            margin-left: 10px;
+        }
+    }
+
+    &:nth-child(even) {
+        background-color: rgb(236, 236, 236);
+        img {
+            float: left;
+            margin-right: 10px;
+        }
+    }
+    p:last-child {
+        margin-bottom: 0;
+        padding-bottom: 1em;
+    }
+
+    &:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
