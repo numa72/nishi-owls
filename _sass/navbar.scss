@@ -84,3 +84,10 @@ $sub-item-height: 40px;
         clear: both;
     }
 }
+
+@media screen and (max-width: $max-tablet-width) {
+    // Do not expand menus on touch centric devices.
+    #menu li ul.sub * {
+        display: none;
+    }
+}
