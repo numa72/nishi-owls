@@ -3,6 +3,8 @@
   subitems:
     - name: チーム紹介
       link: /team/about.html
+    - name: チームの歴史
+      link: /team/history.html
     - name: 選手一覧
       link: /team/members.html
     - name: コーチ・スタッフ
