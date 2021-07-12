@@ -296,3 +296,14 @@
         clear: both;
     }
 }
+
+@media screen and (max-width: $max-tablet-width) {
+    .team-history-main-container {
+        img {
+            float: none !important;
+            margin: 0 auto !important;
+            width: auto;
+            max-height: 200px;
+        }
+    }
+}
