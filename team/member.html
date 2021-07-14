@@ -1,13 +1,13 @@
 ---
-title: 過去の戦績
+title: 現役選手・スタッフ一覧
 ---
 
-{% include breadcrumb.html list="/game/, 試合結果" %}
+{% include breadcrumb.html list="/team/, チーム" %}
 
-<h1>過去の戦績</h1>
+<h1>現役選手・スタッフ一覧</h1>
 
-<table class="old-game-table">
-    {% for row in site.data.old-games %}
+<table class="team-member-table">
+    {% for row in site.data.member %}
     {% if forloop.first %}
     <tr>
         {% for pair in row %}
@@ -24,4 +24,4 @@ title: 過去の戦績
     {% endfor %}
 </table>
 
-<p><a href="/game/">試合結果一覧へ戻る</a></p>
+<p><a href="/team/">チーム紹介へ戻る</a></p>

@@ -307,3 +307,25 @@
         }
     }
 }
+
+table.team-member-table {
+    margin: 1em auto;
+
+    td,
+    th {
+        border-top: 1px solid #ddd;
+        padding: 3px 7px;
+
+        text-align: center;
+    }
+
+    tr {
+        &:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        &:hover {
+            background-color: #f3f3f3;
+        }
+    }
+}
