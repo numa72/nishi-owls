@@ -6,8 +6,10 @@ $max-mobile-width: 480px;
 $max-tablet-width: 768px;
 
 @import "main";
-@import "navbar";
-@import "slide";
-@import "game";
+
 @import "breadcrumb";
+@import "game";
+@import "navbar";
+@import "recruiting";
+@import "slide";
 @import "team";
