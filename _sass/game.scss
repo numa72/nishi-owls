@@ -168,10 +168,12 @@ a:any-link.game-result-quick {
     }
 }
 
-// Make twitter instagram embededing align center.
+// Make youtube, twitter, instagram embededing align center.
 .game-report-contnt {
     .twitter-tweet,
-    .instagram-media {
+    .instagram-media,
+    iframe {
+        display: block;
         margin-left: auto !important;
         margin-right: auto !important;
     }
