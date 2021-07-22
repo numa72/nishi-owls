@@ -218,6 +218,7 @@
 
     h2 {
         font-size: 230%;
+        padding: 20px 0;
 
         // clear default h2 styles
         background: none;
@@ -239,7 +240,15 @@
 
 @media screen and (max-width: $max-mobile-width) {
     .about-team-main-container {
-        padding: 50px 25px;
+        padding: 25px;
+
+        h2 {
+            margin: 0;
+        }
+
+        p {
+            padding: 0;
+        }
     }
 }
 
