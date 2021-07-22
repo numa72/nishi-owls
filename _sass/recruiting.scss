@@ -10,3 +10,46 @@
         text-indent: 1em;
     }
 }
+
+.recruiting-menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 0;
+
+    div {
+        flex-grow: 1;
+        width: 25%;
+        min-width: 250px;
+
+        margin: 1em 20px;
+
+        a {
+            display: flex;
+            align-items: center;
+
+            background: #a90329;
+            background: linear-gradient(to bottom, #a90329 0%, #8f0222 44%, #6d0019 100%);
+
+            border-radius: 20px;
+
+            padding: 10px 25px;
+
+            &:any-link {
+                text-decoration: none;
+                color: white;
+            }
+
+            .material-icons {
+                font-size: 250%;
+                display: block;
+            }
+
+            .menu-item-text {
+                font-size: 125%;
+                margin-left: 20px;
+                font-weight: bold;
+                display: block;
+            }
+        }
+    }
+}
