@@ -91,3 +91,9 @@ $sub-item-height: 40px;
         display: none;
     }
 }
+
+@media screen and (max-width: $max-mobile-width) {
+    #menu {
+        font-size: 90%;
+    }
+}

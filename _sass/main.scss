@@ -122,10 +122,31 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    background: url("/assets/images/bg1.jpg") no-repeat center right / cover;
+    background: url("/assets/images/bg0.jpg") no-repeat center right / cover;
     width: 100%;
     height: 100%;
     z-index: -1;
+  }
+
+  &#bg1:before {
+    background-image: url("/assets/images/bg1.jpg");
+  }
+  &#bg2:before {
+    background-image: url("/assets/images/bg2.jpg");
+  }
+  &#bg3:before {
+    background-image: url("/assets/images/bg3.jpg");
+  }
+  &#bg4:before {
+    background-image: url("/assets/images/bg4.jpg");
+  }
+}
+
+@media screen and (max-width: $max-tablet-width) {
+  h1 {
+    height: auto;
+    padding: 1em 0 1em 25px;
+    font-size: 125%;
   }
 }
 
