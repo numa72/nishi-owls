@@ -1,3 +1,56 @@
+.game-navigation {
+    margin: 1em 0;
+    a {
+        display: block;
+        width: 30%;
+        font-size: 90%;
+
+        &.prev {
+            float: left;
+        }
+
+        &.next {
+            float: right;
+            text-align: right;
+        }
+
+        &:any-link {
+            text-decoration: none;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        font-weight: bold;
+        text-align: center;
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    &:after {
+        height: 0;
+        visibility: hidden;
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@media screen and (max-width: $max-tablet-width) {
+    .game-navigation {
+        a {
+            width: 50%;
+        }
+        p {
+            clear: both;
+            width: 100%;
+        }
+    }
+}
+
 table.game-result-detail {
     font-size: 150%;
     margin: auto;
@@ -30,13 +83,16 @@ table.game-result-detail {
     }
 }
 
-.game-result-quick {
-    width: 100%;
+a:any-link.game-result-quick {
     box-sizing: border-box;
     display: table;
     table-layout: fixed;
     border-bottom: 1px solid #bfbfbf;
     padding: 1.3em 10px;
+
+    color: black;
+    text-decoration: none;
+    width: 100%;
 
     .game-result-quick-col {
         display: table-cell;
@@ -50,15 +106,13 @@ table.game-result-detail {
             border-right: none;
         }
 
-        a:any-link {
-            color: black;
-            text-decoration: none;
-            display: block;
-            width: 100%;
-        }
-
         a:hover {
             text-decoration: underline;
+        }
+
+        .score {
+            font-size: 125%;
+            font-weight: bold;
         }
     }
 
@@ -68,7 +122,7 @@ table.game-result-detail {
 }
 
 @media screen and (max-width: $max-mobile-width) {
-    .game-result-quick {
+    a:any-link.game-result-quick {
         display: flex;
         flex-wrap: wrap;
         padding: 1em 10px 0;
@@ -100,6 +154,10 @@ table.game-result-detail {
             }
             &:nth-child(2n + 1) {
                 order: 2;
+            }
+
+            .score {
+                font-size: 100%;
             }
         }
     }

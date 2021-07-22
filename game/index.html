@@ -8,8 +8,6 @@ title: 試合結果
 
 <h2>最近の試合</h2>
 
-<p>試合名をクリックしたら詳細が開きます。</p>
-
 {% assign games = "" | split: "" %}
 {% for game in site.games reversed %}
 {% if 3 >= forloop.index %}
@@ -21,8 +19,14 @@ title: 試合結果
 <h2>過去の試合結果</h2>
 
 <ul>
+    {% comment %} TODO can we avoid N^2 computation easily? {% endcomment %}
     {% for year in site.game_years reversed %}
-    <li><a href="{{ year.url }}">{{ year.year }}年</a></li>
+    {% assign num = 0 %}
+    {% for game in site.games %}
+    {% assign y = game.date | date : "%Y" | plus: 0 %}
+    {% if y == year.year %}{% assign num = num | plus: 1 %}{% endif %}
+    {% endfor %}
+    <li><a href="{{ year.url }}">{{ year.year }}年 ({{ num }})</a></li>
     {% endfor %}
     <li><a href="old-games.html">2017年より以前の試合結果一覧</a></li>
 </ul>

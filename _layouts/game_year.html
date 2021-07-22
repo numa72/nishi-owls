@@ -6,10 +6,21 @@ layout: default
 
 <h1>{{ page.year }}年の試合結果一覧</h1>
 
-<p>試合名をクリックしたら詳細が開きます。</p>
-
-{{ content }}
+{{ content | markdownify }}
 
 {% include game_year_base.html year=page.year %}
+
+<div class="game-navigation">
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}" class="prev">
+        &laquo; {{ page.previous.year }}年
+    </a>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{page.next.url}}" class="next">
+        {{ page.next.year }}年 &raquo;
+    </a>
+    {% endif %}
+</div>
 
 <p><a href="/game/">試合結果一覧へ戻る</a></p>

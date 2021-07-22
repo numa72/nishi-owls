@@ -10,7 +10,27 @@ layout: default
 
 <h1>試合結果<br />{{ page.game_name }}</h1>
 
-<p>{{ page.date | date: "%Y年%m月%d日" }} {{page.start_at}} {% if page.place %}<br />at {{page.place}}{% endif %}</p>
+<div class="game-navigation">
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}" class="prev">
+        &laquo; {{ page.previous.game_name }}<br />
+        {{ page.previous.date | date: "%Y年%m月%d日" }}<br />
+        vs. {{page.previous.vs}}
+    </a>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{page.next.url}}" class="next">
+        {{ page.next.game_name }} &raquo;<br />
+        {{ page.next.date | date: "%Y年%m月%d日" }}<br />
+        vs. {{page.next.vs}}
+    </a>
+    {% endif %}
+    <p>
+        {{ page.game_name }}<br />
+        {{ page.date | date: "%Y年%m月%d日" }} {{page.start_at}}
+        {% if page.place %}<br /> at {{page.place}}{% endif %}
+    </p>
+</div>
 
 <table class="game-result-detail">
     <tr>
