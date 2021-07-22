@@ -2,16 +2,19 @@
     margin: 1em 0;
     a {
         display: block;
+        box-sizing: border-box;
         width: 30%;
         font-size: 90%;
 
         &.prev {
             float: left;
+            padding-left: 3px;
         }
 
         &.next {
             float: right;
             text-align: right;
+            padding-right: 3px;
         }
 
         &:any-link {
