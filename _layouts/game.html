@@ -36,7 +36,7 @@ layout: default
     <tr>
         <th></th>
         {% for _ in page.our_scores %}
-        <th>{{ forloop.index }}Q</th>
+        <th>{% if forloop.index == 5 %}TB{% else %}{{ forloop.index }}Q{% endif %}</th>
         {% endfor %}
         <th></th>
     </tr>
@@ -57,7 +57,20 @@ layout: default
 </table>
 
 <div class="game-report-contnt">
-    {{ content | markdownify }}
+    {{ content }}
+</div>
+
+<div class="game-navigation">
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}" class="prev">
+        &laquo; 前の試合
+    </a>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{page.next.url}}" class="next">
+        次の試合 &raquo;
+    </a>
+    {% endif %}
 </div>
 
 <p><a href="{{ gameyear.url }}">{{ year }}年の試合結果一覧へ</a></p>
