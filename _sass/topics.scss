@@ -1,0 +1,63 @@
+// querying #main to override main style.
+#main ul.topics-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        list-style: none;
+        width: 30%;
+        margin-left: 3%;
+        margin-right: 0;
+        margin-bottom: 50px;
+
+        border-bottom: silver 2px solid;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            position: relative;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            h3 {
+                flex-grow: 1;
+            }
+
+            .topics-list-footer {
+                margin-top: 0.5em;
+                font-size: 90%;
+                text-align: right;
+                color: #333;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: -2px;
+                border-top: 2px #701301 solid;
+                width: 25%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $max-mobile-width) {
+    #main ul.topics-list {
+        li {
+            width: 47%;
+            margin-left: 2%;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+    }
+}

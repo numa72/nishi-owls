@@ -28,7 +28,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: "topics"
   - scope:
       path: ""
     values:
