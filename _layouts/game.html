@@ -13,14 +13,14 @@ layout: default
 <div class="game-navigation">
     {% if page.previous.url %}
     <a href="{{page.previous.url}}" class="prev">
-        &laquo; {{ page.previous.game_name }}<br />
+        &laquo; 前の試合<br />
         {{ page.previous.date | date: "%Y年%m月%d日" }}<br />
         vs. {{page.previous.vs}}
     </a>
     {% endif %}
     {% if page.next.url %}
     <a href="{{page.next.url}}" class="next">
-        {{ page.next.game_name }} &raquo;<br />
+        次の試合 &raquo;<br />
         {{ page.next.date | date: "%Y年%m月%d日" }}<br />
         vs. {{page.next.vs}}
     </a>
