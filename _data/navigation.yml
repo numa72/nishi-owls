@@ -1,8 +1,8 @@
 - name: チーム
   link: /team/
   subitems:
-    - name: チーム紹介
-      link: /team/about.html
+    - name: チームフィロソフィー
+      link: /team/philosophy.html
     - name: チームの歴史
       link: /team/history.html
     - name: 選手一覧
