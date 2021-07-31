@@ -91,7 +91,7 @@ table.game-result-detail {
     }
 }
 
-a:any-link.game-result-quick {
+a:any-link.game-result-list-row {
     box-sizing: border-box;
     display: table;
     table-layout: fixed;
@@ -102,7 +102,7 @@ a:any-link.game-result-quick {
     text-decoration: none;
     width: 100%;
 
-    .game-result-quick-col {
+    .game-result-list-col {
         display: table-cell;
         text-align: center;
         vertical-align: middle;
@@ -129,17 +129,17 @@ a:any-link.game-result-quick {
     }
 }
 
-@media screen and (max-width: $max-mobile-width) {
-    a:any-link.game-result-quick {
+@media screen and (max-width: $max-tablet-width) {
+    a:any-link.game-result-list-row {
         display: flex;
         flex-wrap: wrap;
         padding: 1em 10px 0;
 
-        .game-result-quick-col {
+        .game-result-list-col {
             padding: 0.2em 0;
         }
 
-        h3.game-result-quick-col {
+        h3.game-result-list-col {
             width: 100%;
             border-right: none;
 
@@ -149,12 +149,10 @@ a:any-link.game-result-quick {
             }
         }
 
-        div.game-result-quick-col {
+        div.game-result-list-col {
             width: 50%;
             border-top: 1px solid #bfbfbf;
             border-right: none;
-
-            font-size: 90%;
 
             // order vertically.
             &:nth-child(2n) {
@@ -167,6 +165,14 @@ a:any-link.game-result-quick {
             .score {
                 font-size: 100%;
             }
+        }
+    }
+}
+
+@media screen and (max-width: $max-mobile-width) {
+    a:any-link.game-result-list-row {
+        div.game-result-list-col {
+            font-size: 90%;
         }
     }
 }

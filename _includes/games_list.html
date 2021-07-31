@@ -1,18 +1,18 @@
 {% for game in include.games %}
-<a href="{{ game.url }}" class="game-result-quick">
-    <h3 class="game-result-quick-col">
+<a href="{{ game.url }}" class="game-result-list-row">
+    <h3 class="game-result-list-col">
         {{ game.game_name }}
     </h3>
-    <div class="game-result-quick-col">
+    <div class="game-result-list-col">
         {{ game.date | date: "%m月%d日" }} {{ game.start_at }}
     </div>
-    <div class="game-result-quick-col">
+    <div class="game-result-list-col">
         {{ game.place }}
     </div>
-    <div class="game-result-quick-col">
+    <div class="game-result-list-col">
         vs. {{ game.vs }}
     </div>
-    <div class="game-result-quick-col">
+    <div class="game-result-list-col">
         {% if game.result == 'win' %}○{% elsif game.result == 'lose' %}×{% else %}△{% endif %}
         <span class="score">{{ game.our_score }} - {{ game.vs_score }}</span>
     </div>
