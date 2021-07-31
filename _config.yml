@@ -34,6 +34,9 @@ defaults:
     values:
       layout: "default"
 
+liquid:
+  strict_filters: true
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap

@@ -5,7 +5,7 @@
         <a itemprop="item" href="/">
             <span itemprop="name">HOME</span>
         </a>
-        <meta itemprop="position" content="{{ i }}" />
+        <meta itemprop="position" content="1" />
     </li>
     {% for i in (1..num) %}
     {% assign idx = i | plus: i | plus: -2 %}{% assign url = list[idx] %}
@@ -14,7 +14,7 @@
         <a itemprop="item" href="{{ url }}">
             <span itemprop="name">{{ name }}</span>
         </a>
-        <meta itemprop="position" content="{{ i }}" />
+        <meta itemprop="position" content="{{ i | plus: 1 }}" />
     </li>
     {% endfor %}
 </ol>
