@@ -40,13 +40,12 @@
         display: block;
         clear: both;
     }
-}
 
-@media screen and (max-width: $max-tablet-width) {
-    .game-navigation {
+    @include mq(tablet) {
         a {
             width: 50%;
         }
+
         p {
             clear: both;
             width: 100%;
@@ -59,6 +58,13 @@ table.game-result-detail {
     font-size: 150%;
     margin: auto;
 
+    @include mq(tablet) {
+        font-size: 120%;
+    }
+    @include mq(mobile) {
+        font-size: 100%;
+    }
+
     th,
     td {
         padding-left: 20px;
@@ -66,28 +72,15 @@ table.game-result-detail {
         text-align: center;
         border-right: 1px solid silver;
         border-bottom: 1px solid silver;
-    }
 
-    tr:first-child {
-        background-color: #f3f3f3;
-    }
-}
-
-@media screen and (max-width: $max-tablet-width) {
-    table.game-result-detail {
-        font-size: 120%;
-
-        th,
-        td {
+        @include mq(tablet) {
             padding-left: 3px;
             padding-right: 3px;
         }
     }
-}
 
-@media screen and (max-width: $max-mobile-width) {
-    table.game-result-detail {
-        font-size: 100%;
+    tr:first-child {
+        background-color: #f3f3f3;
     }
 }
 
@@ -114,10 +107,6 @@ a:any-link.game-result-list-row {
             border-right: none;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
         .score {
             font-size: 125%;
             font-weight: bold;
@@ -127,10 +116,8 @@ a:any-link.game-result-list-row {
     &:nth-child(2n) {
         background-color: #e7e7e7;
     }
-}
 
-@media screen and (max-width: $max-tablet-width) {
-    a:any-link.game-result-list-row {
+    @include mq(tablet) {
         display: flex;
         flex-wrap: wrap;
         padding: 1em 10px 0;
@@ -154,6 +141,10 @@ a:any-link.game-result-list-row {
             border-top: 1px solid #bfbfbf;
             border-right: none;
 
+            @include mq(mobile) {
+                font-size: 90%;
+            }
+
             // order vertically.
             &:nth-child(2n) {
                 order: 1;
@@ -165,14 +156,6 @@ a:any-link.game-result-list-row {
             .score {
                 font-size: 100%;
             }
-        }
-    }
-}
-
-@media screen and (max-width: $max-mobile-width) {
-    a:any-link.game-result-list-row {
-        div.game-result-list-col {
-            font-size: 90%;
         }
     }
 }

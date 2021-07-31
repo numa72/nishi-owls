@@ -34,13 +34,11 @@
             height: auto;
             opacity: 0.8;
             cursor: pointer;
-        }
-    }
-}
 
-@media (max-width: 1079px) {
-    #nav img {
-        max-width: 100%;
-        height: auto;
+            @media (max-width: $main-width - 1px) {
+                max-width: 100%;
+                height: auto;
+            }
+        }
     }
 }

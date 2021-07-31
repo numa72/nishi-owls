@@ -9,6 +9,10 @@
         padding: 10px;
         box-sizing: border-box;
 
+        @include mq(mobile) {
+            min-width: 100%;
+        }
+
         .staff-main {
             display: flex;
 
@@ -46,29 +50,8 @@
                 dd {
                     width: 75%;
                 }
-            }
-        }
 
-        .staff-content {
-            p {
-                margin: 0.3em 0;
-                font-size: 90%;
-            }
-
-            h3 {
-                color: #701301;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: $max-mobile-width) {
-    .staff-list {
-        .staff-box {
-            min-width: 100%;
-
-            .staff-main {
-                dl {
+                @include mq(mobile) {
                     dd {
                         margin-top: 0;
                         border-top: none;
@@ -89,6 +72,17 @@
                 }
             }
         }
+
+        .staff-content {
+            p {
+                margin: 0.3em 0;
+                font-size: 90%;
+            }
+
+            h3 {
+                color: #701301;
+            }
+        }
     }
 }
 
@@ -100,8 +94,19 @@
 
     display: flex;
 
+    @include mq(tablet) {
+        width: 95%;
+        margin: 10px auto;
+    }
+    @include mq(mobile) {
+        display: block; // clear flex
+    }
+
     .image-box {
         width: 60%;
+        @include mq(mobile) {
+            width: 100%;
+        }
 
         img {
             width: 100%;
@@ -117,6 +122,17 @@
         display: flex;
         flex-wrap: wrap;
         align-content: center;
+
+        @include mq(tablet) {
+            width: 36%;
+            padding: 0 2%; // 2% = (100 - 60 (image-box) - 36 (this)) / 2. TODO compute.
+            font-size: 80%;
+        }
+
+        @include mq(mobile) {
+            width: 90%;
+            padding: 20px 5%;
+        }
 
         .about-title {
             font-weight: bold;
@@ -169,43 +185,13 @@
     }
 }
 
-@media screen and (max-width: $max-tablet-width) {
-    .about-team-box {
-        width: 95%;
-        margin: 10px auto;
-
-        .about-text {
-            width: 36%;
-            padding: 0 2%; // 2% = (100 - 60 (image-box) - 36 (this)) / 2. TODO compute.
-            font-size: 80%;
-        }
-    }
-}
-
-@media screen and (max-width: $max-mobile-width) {
-    .about-team-box {
-        width: 95%;
-        margin: 10px auto;
-
-        display: block; // clear flex
-
-        .image-box {
-            width: 100%;
-        }
-
-        .about-text {
-            width: 90%;
-            padding: 20px 5%;
-        }
-    }
-}
-
-.about-team-main-container {
+.team-philosophy-container {
     &#pride-of-nishi {
         background-image: url("/assets/images/team/pride-of-nishi-bg.jpg");
     }
     &#about-owls {
         background-image: url("/assets/images/team/about-owls-bg.jpg");
+        background-color: #220000;
     }
     background-color: #222222;
     background-size: cover;
@@ -216,9 +202,20 @@
     color: white;
     line-height: 2;
 
+    @include mq(tablet) {
+        padding: 100px 50px;
+    }
+    @include mq(mobile) {
+        padding: 25px;
+    }
+
     h2 {
         font-size: 230%;
         padding: 20px 0;
+
+        @include mq(mobile) {
+            margin: 0;
+        }
 
         // clear default h2 styles
         background: none;
@@ -229,24 +226,8 @@
 
     p {
         font-family: serif;
-    }
-}
 
-@media screen and (max-width: $max-tablet-width) {
-    .about-team-main-container {
-        padding: 100px 50px;
-    }
-}
-
-@media screen and (max-width: $max-mobile-width) {
-    .about-team-main-container {
-        padding: 25px;
-
-        h2 {
-            margin: 0;
-        }
-
-        p {
+        @include mq(mobile) {
             padding: 0;
         }
     }
@@ -278,11 +259,23 @@
         position: relative;
         z-index: 1;
         height: 250px;
+
+        @include mq(tablet) {
+            float: none !important;
+            margin: 0 auto !important;
+            width: auto;
+            max-height: 200px;
+        }
     }
 
     p {
         margin-left: 5px;
         margin-right: 5px;
+
+        @include mq(tablet) {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
     &:nth-child(odd) {
@@ -309,22 +302,6 @@
         display: block;
         content: "";
         clear: both;
-    }
-}
-
-@media screen and (max-width: $max-tablet-width) {
-    .team-history-main-container {
-        img {
-            float: none !important;
-            margin: 0 auto !important;
-            width: auto;
-            max-height: 200px;
-        }
-
-        p {
-            margin-left: 0;
-            margin-right: 0;
-        }
     }
 }
 

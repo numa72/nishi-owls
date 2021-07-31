@@ -12,6 +12,13 @@
 
         border-bottom: silver 2px solid;
 
+        @include mq(mobile) {
+            width: 47%;
+            margin-left: 2%;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+
         a {
             text-decoration: none;
             color: inherit;
@@ -47,17 +54,6 @@
                 border-top: 2px #701301 solid;
                 width: 25%;
             }
-        }
-    }
-}
-
-@media screen and (max-width: $max-mobile-width) {
-    #main ul.topics-list {
-        li {
-            width: 47%;
-            margin-left: 2%;
-            margin-right: 0;
-            margin-bottom: 30px;
         }
     }
 }

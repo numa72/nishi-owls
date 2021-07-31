@@ -14,6 +14,10 @@ $sub-item-height: 40px;
     display: flex;
     justify-content: space-between;
 
+    @include mq(mobile) {
+        font-size: 90%;
+    }
+
     & > li {
         width: 100%;
         height: $bar-height;
@@ -36,6 +40,7 @@ $sub-item-height: 40px;
             padding-top: 5px;
             padding-bottom: 5px;
             border-bottom: solid 5px #c00000;
+            // TODO use css instead of image.
             background-image: url("/assets/images/tirangle-for-nav-bar.png");
             background-repeat: no-repeat;
             background-position: center bottom;
@@ -72,6 +77,11 @@ $sub-item-height: 40px;
                     }
                 }
             }
+
+            @include mq(tablet) {
+                // Do not expand menus on touch centric devices.
+                display: none !important;
+            }
         }
     }
 
@@ -82,18 +92,5 @@ $sub-item-height: 40px;
         content: "";
         display: block;
         clear: both;
-    }
-}
-
-@media screen and (max-width: $max-tablet-width) {
-    // Do not expand menus on touch centric devices.
-    #menu li ul.sub * {
-        display: none;
-    }
-}
-
-@media screen and (max-width: $max-mobile-width) {
-    #menu {
-        font-size: 90%;
     }
 }

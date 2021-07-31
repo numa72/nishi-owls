@@ -81,6 +81,14 @@
         padding: 10px 20px 30px;
         box-sizing: border-box;
 
+        @include mq(tablet) {
+            min-width: 100%;
+
+            p {
+                padding: 0;
+            }
+        }
+
         h3,
         p {
             margin-left: 30px;
@@ -109,18 +117,6 @@
         p:before {
             content: "A";
             background-color: #017;
-        }
-    }
-}
-
-@media screen and (max-width: $max-tablet-width) {
-    .recruiting-faq {
-        .faq-box {
-            min-width: 100%;
-
-            p {
-                padding: 0;
-            }
         }
     }
 }

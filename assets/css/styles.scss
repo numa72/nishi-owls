@@ -2,8 +2,20 @@
 ---
 
 $main-width: 1080px;
+
 $max-mobile-width: 480px;
 $max-tablet-width: 768px;
+
+$breakpoints: (
+    "mobile": "screen and (max-width: " + $max-mobile-width + ")",
+    "tablet": "screen and (max-width: " + $max-tablet-width + ")",
+);
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
 
 @import "main";
 
