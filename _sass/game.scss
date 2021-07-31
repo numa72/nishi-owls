@@ -189,12 +189,13 @@ table.old-game-table {
         border-top: 1px solid #ddd;
         padding: 3px;
 
-        &.col1,
-        &.col2 {
+        font-size: 80%;
+
+        &.col-year {
             text-align: center;
         }
-        &.col3 {
-            white-space: pre;
+        &.col-results {
+            white-space: pre-line;
         }
     }
 
