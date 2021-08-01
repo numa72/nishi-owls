@@ -1,5 +1,5 @@
 ---
-tags: OBOG歴訪
+tags: visit-obog
 title: OBOG歴訪(1) - 15期 川俣慶司さん
 ---
 

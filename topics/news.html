@@ -1,0 +1,13 @@
+---
+title: ニュース記事一覧
+---
+
+{% include breadcrumb.html list="/topics/, トピックス" %}
+
+<h1 id="bg4">ニュース記事一覧</h1>
+
+<h2>記事一覧</h2>
+
+{% include topics_list.html posts=site.tags.news %}
+
+<p><a href="index.html">トピックス一覧へ戻る</a></p>

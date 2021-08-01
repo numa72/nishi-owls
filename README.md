@@ -6,6 +6,8 @@ To run locally:
 (rbenv exec) bundle exec jekyll serve
 ```
 
+`--drafts` option to show posts in `_drafts` directory.
+
 # Note of external resources
 
 * Facebook logo (assets/images/facebook.png)
