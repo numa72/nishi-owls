@@ -12,6 +12,8 @@ collections:
   game_years:
     output: true
     permalink: /game/:name/index.html
+  posts:
+    permalink: /topics/:year/:month-:day-:title:output_ext
 
 defaults:
   - scope:
