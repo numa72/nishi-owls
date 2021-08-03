@@ -178,3 +178,86 @@ p {
     padding: 0 8px;
   }
 }
+
+h2#sns-heading {
+  background: none;
+  color: #c00000;
+
+  padding-left: 10px;
+  font-size: 120%;
+
+  @include mq(tablet) {
+    text-align: center;
+  }
+
+  &:before {
+    display: none;
+  }
+}
+
+#main ul.top-sns-box {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+
+  li {
+    margin: 5px 0;
+    width: 20%;
+    list-style: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px silver;
+
+    text-align: center;
+
+    @include mq(tablet) {
+      width: 25%;
+    }
+    @include mq(mobile) {
+      width: 30%;
+    }
+
+    a:any-link {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 30px 0;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+
+      @include mq(tablet) {
+        padding: 25px 0;
+        font-size: 90%;
+      }
+      @include mq(mobile) {
+        padding: 20px 0;
+        font-size: 80%;
+      }
+    }
+
+    img {
+      height: 40px;
+      width: 40px;
+
+      @include mq(tablet) {
+        height: 35px;
+        width: 35px;
+      }
+      @include mq(mobile) {
+        height: 30px;
+        width: 30px;
+      }
+    }
+
+    &#facebook-box {
+      background-color: rgba(24, 119, 242, 1);
+    }
+    &#twitter-box {
+      background-color: #1da1f2;
+    }
+    &#instagram-box {
+      // From https://stackoverflow.com/a/37751377
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+  }
+}
