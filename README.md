@@ -16,3 +16,6 @@ To run locally:
   - From https://about.twitter.com/en/who-we-are/brand-toolkit
 * Instagram logo (assets/images/instagram.png)
   - From https://en.facebookbrand.com/instagram/assets/instagram?audience=instagram-landing
+
+* Tocca.js libraryr for detecting swipe
+  - From https://github.com/GianlucaGuarini/Tocca.js

@@ -13,21 +13,28 @@ $(function () {
         }, 5000);
     });
 
-    $("#slideGalley .nav .next").click(function () {
+    const goNext = function () {
         $("#slideGalley .slide:not(:animated)").animate({
             "margin-left": -1 * $("#slideGalley .slide li").width()
         }, "swing", function () {
             $("#slideGalley .slide").css("margin-left", "0").append($("#slideGalley .slide li:first-child"))
         });
-    });
-    $("#slideGalley .nav .prev").click(function () {
+    }
+
+    const goPrev = function () {
         $("#slideGalley .slide:not(:animated)")
             .css("margin-left", -1 * $("#slideGalley .slide li").width())
             .prepend($("#slideGalley .slide li:last-child"))
             .animate({
                 "margin-left": 0
             }, "swing");
-    });
+    }
+
+    $("#slideGalley .nav .next").click(goNext);
+    $("#slideGalley .nav .prev").click(goPrev);
+
+    $("#slideGalley").on('swipeleft', goNext);
+    $("#slideGalley").on('swiperight', goPrev);
 });
 
 // TODO find better way to share max width value with css
