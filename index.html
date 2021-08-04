@@ -25,7 +25,7 @@
 
 <h2>TOPICS</h2>
 {% assign posts_to_show = "" | split: "" %}
-{% for post in site.posts limit: 2 %}
+{% for post in site.posts limit: 6 %}
 {% assign posts_to_show = posts_to_show | push: post %}
 {% endfor %}
 {% include topics_list.html posts=posts_to_show %}
