@@ -70,14 +70,14 @@
 </div>
 
 
-<h2>TOPICS</h2>
+<h2 class="toppage-heading">TOPICS</h2>
 {% assign posts_to_show = "" | split: "" %}
 {% for post in site.posts limit: 6 %}
 {% assign posts_to_show = posts_to_show | push: post %}
 {% endfor %}
 {% include topics_list.html posts=posts_to_show %}
 
-<h2 id="sns-heading">OWLS ソーシャルアカウント</h2>
+<h2 class="toppage-heading">OWLS ソーシャルアカウント</h2>
 <ul class="top-sns-box">
     <li id='facebook-box'>
         <a href="https://www.facebook.com/%E9%83%BD%E7%AB%8B%E8%A5%BF%E9%AB%98OWLS-199121000156356">

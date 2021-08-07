@@ -179,7 +179,7 @@ p {
   }
 }
 
-h2#sns-heading {
+h2.toppage-heading {
   background: none;
   color: #c00000;
 
@@ -309,6 +309,10 @@ h2#sns-heading {
         .score {
           font-size: 130%;
           font-weight: bold;
+        }
+
+        &:hover {
+          background: #ffffe0;
         }
       }
 
