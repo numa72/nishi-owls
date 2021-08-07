@@ -293,7 +293,7 @@ h2#sns-heading {
       a {
         display: block;
         border: 2px silver solid;
-        padding: 3px;
+        padding: 10px;
         box-shadow: 2px 2px 2px silver;
         text-align: center;
 
@@ -314,8 +314,11 @@ h2#sns-heading {
 
       @include mq(mobile) {
         min-width: 250px;
+        margin-right: 0;
+        margin-left: 0;
 
         a {
+          padding: 3px;
           .sub-info {
             font-size: 80%;
           }
