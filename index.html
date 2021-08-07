@@ -14,14 +14,42 @@
     </div>
 </div>
 
-{% assign game = site.games | last %}
-{% if game %}
-<h2>最新の試合結果</h2>
-<p>
-    <a href="{{ game.url }}">{{ game.date | date: "%Y年%m月%d日" }}<br />
-        都立西高 {{ game.our_score }} - {{ game.vs_score }} {{ game.vs }}</a>
-</p>
+{% if site.data.next-games %}
+<section class="top-next-game">
+    <h2>NEXT GAME</h2>
+    {% for game in site.data.next-games %}
+    <p>
+        <a href="{{ game.url }}">
+            {{ game.name }}<br />
+            {{ game.date | date: "%Y年%m月%d日" }} {{ game.start_at }}<br />
+            @ {{ game.place }}<br />
+            vs. {{ game.vs }}
+        </a>
+    </p>
+    {% endfor %}
+</section>
 {% endif %}
+
+{% assign latest_game = site.games | last %}
+<section class="top-latest-games">
+    {% assign latest_year = latest_game.date | date: "%Y" %}
+    <h2>RECENT GAMES
+        ({{ latest_year }} {% if latest_game.season == 'spring' %}Spring{% else %}Fall{%endif%} Season)
+    </h2>
+    {% for game in site.games reversed %}
+    {% assign this_year = game.date | date: "%Y" %}
+    {% if this_year == latest_year and latest_game.season == game.season %}
+    <p>
+        <a href="{{ game.url }}">
+            {{ game.game_name }}<br />
+            {{ game.date | date: "%Y年%m月%d日" }} {{ game.start_at }}<br />
+            @ {{ game.place }}<br />
+            都立西高 {{ game.our_score }} - {{ game.vs_score }} {{ game.vs }}</a>
+    </p>
+    {% endif %}
+    {% endfor %}
+</section>
+
 
 <h2>TOPICS</h2>
 {% assign posts_to_show = "" | split: "" %}
