@@ -6,14 +6,16 @@
     li {
         list-style: none;
         width: 30%;
-        margin-left: 3%;
-        margin-right: 0;
+        // -2%-[box(30%)]-3%-[box(30%)]-3%-[box(30%)]-2%-
+        margin-left: 2%;
+        margin-right: 1%;
         margin-bottom: 50px;
 
         border-bottom: silver 2px solid;
 
         @include mq(mobile) {
             width: 47%;
+            // -2%-[box(47%)]-2%-[box(47%)]-2%-
             margin-left: 2%;
             margin-right: 0;
             margin-bottom: 30px;
