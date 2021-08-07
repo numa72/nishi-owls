@@ -1,5 +1,5 @@
 .welcome-to-owls {
-    background-image: url("/assets/images/recruiting/welcome-bg.jpg");
+    background-image: url("/assets/images/message/welcome-bg.jpg");
     background-size: cover;
     background-position: center;
 
@@ -11,7 +11,7 @@
     }
 }
 
-.recruiting-menu {
+.message-menu {
     display: flex;
     flex-wrap: wrap;
     padding: 1em 0;
@@ -54,7 +54,7 @@
     }
 }
 
-.recruiting-message {
+.message-main {
     ul {
         margin: 1em;
     }
@@ -70,7 +70,7 @@
 }
 
 // TODO share some logic with .staff-list
-.recruiting-faq {
+.message-faq {
     display: flex;
     flex-wrap: wrap;
 

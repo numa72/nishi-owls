@@ -11,14 +11,14 @@
       link: /team/staff.html
 - name: 試合
   link: /game/
-- name: 部員募集
-  link: /recruiting/
+- name: メッセージ
+  link: /message/
   subitems:
-    - name: メッセージ
-      link: /recruiting/message.html
+    - name: 監督・OB会長より
+      link: /message/coach-ob.html
     - name: FAQ
-      link: /recruiting/faq.html
+      link: /message/faq.html
     - name: 卒業生の活躍
-      link: /recruiting/obog.html
+      link: /message/obog.html
 - name: トピックス
   link: /topics/
