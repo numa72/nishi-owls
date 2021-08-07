@@ -37,6 +37,6 @@ $(function () {
 	gamesSlider.on('mousemove', (e) => {
 		if (!isMouseDown) return;
 		e.preventDefault();
-		gamesSlider.scrollLeft(scrollX + (e.pageX - startX));
+		gamesSlider.scrollLeft(scrollX - (e.pageX - startX));
 	})
 });

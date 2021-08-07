@@ -265,14 +265,28 @@ h2.toppage-heading {
 #main .top-games {
   overflow-x: auto;
   white-space: nowrap;
-  margin: auto;
+
+  @include mq(mobile) {
+    overflow-x: visible;
+    white-space: normal;
+  }
 
   .top-games-unit {
     display: inline-block;
     vertical-align: top;
 
+    @include mq(mobile) {
+      display: block;
+      // instead, make it horizontally scrollbale in each unit.
+      .top-games-container {
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+
     h2 {
       margin-top: 0;
+      padding-left: 10px;
       &#next-games {
         background: #c00000;
       }
