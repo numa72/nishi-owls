@@ -42,7 +42,8 @@
     <div class="top-games-unit">
         {% assign latest_year = latest_game.date | date: "%Y" %}
         <h2 id="recent-games">RECENT GAMES
-            ({{ latest_year }} {% if latest_game.season == 'spring' %}Spring{% else %}Fall{%endif%} Season)
+            <!--            ({{ latest_year }} {% if latest_game.season == 'spring' %}Spring{% else %}Fall{%endif%} Season)
+-->
         </h2>
         <div class="top-games-container">
             {% for game in site.games reversed %}
