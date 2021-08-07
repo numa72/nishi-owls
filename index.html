@@ -14,41 +14,60 @@
     </div>
 </div>
 
-{% if site.data.next-games %}
-<section class="top-next-game">
-    <h2>NEXT GAME</h2>
-    {% for game in site.data.next-games %}
-    <p>
-        <a href="{{ game.url }}">
-            {{ game.name }}<br />
-            {{ game.date | date: "%Y年%m月%d日" }} {{ game.start_at }}<br />
-            @ {{ game.place }}<br />
-            vs. {{ game.vs }}
-        </a>
-    </p>
-    {% endfor %}
-</section>
-{% endif %}
-
-{% assign latest_game = site.games | last %}
-<section class="top-latest-games">
-    {% assign latest_year = latest_game.date | date: "%Y" %}
-    <h2>RECENT GAMES
-        ({{ latest_year }} {% if latest_game.season == 'spring' %}Spring{% else %}Fall{%endif%} Season)
-    </h2>
-    {% for game in site.games reversed %}
-    {% assign this_year = game.date | date: "%Y" %}
-    {% if this_year == latest_year and latest_game.season == game.season %}
-    <p>
-        <a href="{{ game.url }}">
-            {{ game.game_name }}<br />
-            {{ game.date | date: "%Y年%m月%d日" }} {{ game.start_at }}<br />
-            @ {{ game.place }}<br />
-            都立西高 {{ game.our_score }} - {{ game.vs_score }} {{ game.vs }}</a>
-    </p>
+<!-- TODO make this horizontally doraggable -->
+<!-- TODO add "more" link -->
+<div class="top-games">
+    {% if site.data.next-games %}
+    <div class="top-games-unit">
+        <h2 id="next-games">UPCOMING GAMES</h2>
+        <div class="top-games-container">
+            {% for game in site.data.next-games %}
+            <p>
+                <a href="{{ game.url }}">
+                    <span class="sub-info">
+                        {{ game.name }}<br />
+                        {{ game.date | date: "%Y年%m月%d日" }} {{ game.start_at }}<br />
+                        @ {{ game.place }}<br />
+                    </span>
+                    <span class="main-info">
+                        vs. {{ game.vs }}
+                    </span>
+                </a>
+            </p>
+            {% endfor %}
+        </div>
+    </div>
     {% endif %}
-    {% endfor %}
-</section>
+
+    {% assign latest_game = site.games | last %}
+    <div class="top-games-unit">
+        {% assign latest_year = latest_game.date | date: "%Y" %}
+        <h2 id="recent-games">RECENT GAMES
+            ({{ latest_year }} {% if latest_game.season == 'spring' %}Spring{% else %}Fall{%endif%} Season)
+        </h2>
+        <div class="top-games-container">
+            {% for game in site.games reversed %}
+            {% assign this_year = game.date | date: "%Y" %}
+            {% if this_year == latest_year and latest_game.season == game.season %}
+            <p>
+                <a href="{{ game.url }}">
+                    <span class="sub-info">
+                        {{ game.game_name }}<br />
+                        {{ game.date | date: "%Y年%m月%d日" }} {{ game.start_at }}<br />
+                        @ {{ game.place }}<br />
+                    </span>
+                    <span class="main-info">
+                        {% if game.result == 'win' %}○{% elsif game.result == 'lose' %}×{% else %}△{% endif %}
+                        <span class="score">{{ game.our_score }} - {{ game.vs_score }}</span>
+                        vs. {{ game.vs }}
+                    </span>
+                </a>
+            </p>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 
 <h2>TOPICS</h2>

@@ -261,3 +261,72 @@ h2#sns-heading {
     }
   }
 }
+
+#main .top-games {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: auto;
+
+  .top-games-unit {
+    display: inline-block;
+    vertical-align: top;
+
+    h2 {
+      margin-top: 0;
+      &#next-games {
+        background: #c00000;
+      }
+      &#recent-games {
+        background: darkred;
+      }
+      &:before {
+        display: none;
+      }
+    }
+
+    .top-games-container p {
+      display: inline-block;
+
+      min-width: 350px;
+      margin: 5px 10px;
+
+      a {
+        display: block;
+        border: 2px silver solid;
+        padding: 3px;
+        box-shadow: 2px 2px 2px silver;
+        text-align: center;
+
+        text-decoration: none;
+        color: inherit;
+
+        .sub-info {
+          color: #333;
+        }
+        .main-info {
+          font-size: 120%;
+        }
+        .score {
+          font-size: 130%;
+          font-weight: bold;
+        }
+      }
+
+      @include mq(mobile) {
+        min-width: 250px;
+
+        a {
+          .sub-info {
+            font-size: 80%;
+          }
+          .main-info {
+            font-size: 95%;
+          }
+          .score {
+            font-size: 110%;
+          }
+        }
+      }
+    }
+  }
+}
