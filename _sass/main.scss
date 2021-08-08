@@ -275,6 +275,7 @@ h2.toppage-heading {
   .top-games-unit {
     display: inline-block;
     vertical-align: top;
+    padding-bottom: 10px;
 
     @include mq(mobile) {
       display: block;
@@ -313,6 +314,7 @@ h2.toppage-heading {
 
     .top-games-container p {
       display: inline-block;
+      vertical-align: top;
 
       min-width: 350px;
       margin: 5px 10px;
@@ -343,6 +345,44 @@ h2.toppage-heading {
         }
       }
 
+      &.more-link {
+        width: 60px;
+        min-width: 60px;
+        overflow: hidden;
+        a {
+          position: relative;
+          border: none;
+          box-shadow: none;
+          padding-top: 40px;
+          margin-top: 40px;
+          color: #555;
+
+          @include mq(mobile) {
+            margin-top: 25px;
+          }
+
+          &:hover {
+            background: none;
+            color: black;
+            &:before {
+              border-left-color: black;
+            }
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 10px;
+            border-style: solid;
+            border-color: transparent;
+            border-left-color: #555;
+            border-width: 15px 40px;
+            width: 0;
+            height: 0;
+          }
+        }
+      }
       @include mq(mobile) {
         min-width: 250px;
         margin-right: 0;
