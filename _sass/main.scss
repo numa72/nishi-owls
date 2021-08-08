@@ -265,6 +265,7 @@ h2.toppage-heading {
 #main .top-games {
   overflow-x: auto;
   white-space: nowrap;
+  position: relative;
 
   @include mq(mobile) {
     overflow-x: visible;
@@ -287,6 +288,7 @@ h2.toppage-heading {
     h2 {
       margin-top: 0;
       padding-left: 10px;
+      height: 27px;
       &#next-games {
         background: #c00000;
       }
@@ -295,6 +297,17 @@ h2.toppage-heading {
       }
       &:before {
         display: none;
+      }
+
+      display: flex;
+      align-items: center;
+
+      span {
+        display: block;
+        &.material-icons {
+          font-size: 26px;
+          padding-right: 5px;
+        }
       }
     }
 
@@ -349,5 +362,17 @@ h2.toppage-heading {
         }
       }
     }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 47px;
+    width: 100%;
+    background: darkred;
+    z-index: -1;
   }
 }

@@ -18,7 +18,10 @@
 <div class="top-games">
     {% if site.data.next-games %}
     <div class="top-games-unit">
-        <h2 id="next-games">UPCOMING GAMES</h2>
+        <h2 id="next-games">
+            <span class="material-icons">sports_football</span>
+            <span>GAME SCHEDULE</span>
+        </h2>
         <div class="top-games-container">
             {% for game in site.data.next-games %}
             <p>
@@ -35,15 +38,12 @@
             </p>
             {% endfor %}
         </div>
-    </div>
-    {% endif %}
-
-    {% assign latest_game = site.games | last %}
-    <div class="top-games-unit">
+    </div>{% endif %}<div class="top-games-unit">
+        {% assign latest_game = site.games | last %}
         {% assign latest_year = latest_game.date | date: "%Y" %}
-        <h2 id="recent-games">RECENT GAMES
-            <!--            ({{ latest_year }} {% if latest_game.season == 'spring' %}Spring{% else %}Fall{%endif%} Season)
--->
+        <h2 id="recent-games">
+            <span class="material-icons">sports_football</span>
+            <span>RECENT GAMES</span>
         </h2>
         <div class="top-games-container">
             {% for game in site.games reversed %}
