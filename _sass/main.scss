@@ -340,7 +340,7 @@ h2.toppage-heading {
           font-weight: bold;
         }
 
-        &:hover {
+        &:any-link:hover {
           background: #ffffe0;
         }
       }

@@ -25,7 +25,7 @@
         <div class="top-games-container">
             {% for game in site.data.next-games %}
             <p>
-                <a href="{{ game.url }}">
+                <a {% if game.url %}href="{{ game.url }}" {% endif %}>
                     <span class="sub-info">
                         {{ game.name }}<br />
                         {{ game.date | date: "%Y年%m月%d日" }} {{ game.start_at }}<br />
