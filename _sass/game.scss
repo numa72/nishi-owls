@@ -197,6 +197,13 @@ table.old-game-table {
             background-color: #f3f3f3;
         }
     }
+
+    a:any-link {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 .game-report-detail {

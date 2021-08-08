@@ -7,17 +7,18 @@ title: 過去の戦績
 <h1 id="bg3">過去の戦績</h1>
 
 <table class="old-game-table">
-    {% for row in site.data.old-games %}
-    {% if forloop.first %}
     <tr>
         <th>年</th>
         <th>戦績</th>
     </tr>
-    {% endif %}
-
+    {% for row in site.data.old-games %}
+    {% assign gameyear = site.game_years | where: "year", row.year | first %}
     <tr>
         <td class='col-year'>
-            {{ row.year }}<br />({{ row.jyear }})
+            {% if gameyear %}<a href='{{gameyear.url}}'>{% endif %}
+                {{ row.year }}<br />
+                ({{ row.jyear }})<br />
+                {% if gameyear %}</a>{% endif %}
         </td>
         <td class='col-results'>{{ row.results }}</td>
     </tr>

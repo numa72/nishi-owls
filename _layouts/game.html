@@ -36,7 +36,7 @@ layout: default
     <tr>
         <th></th>
         {% for _ in page.our_scores %}
-        <th>{% if forloop.index == 5 %}TB{% else %}{{ forloop.index }}Q{% endif %}</th>
+        <th>{% if forloop.index >= 5 %}TB{% else %}{{ forloop.index }}Q{% endif %}</th>
         {% endfor %}
         <th></th>
     </tr>
