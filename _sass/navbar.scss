@@ -15,7 +15,7 @@ $sub-item-height: 40px;
     justify-content: space-between;
 
     @include mq(mobile) {
-        font-size: 90%;
+        font-size: 85%;
     }
 
     & > li {
