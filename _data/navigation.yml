@@ -16,9 +16,9 @@
   subitems:
     - name: 監督・OB会長より
       link: /message/coach-ob.html
+    - name: 活躍中のOBより
+      link: /message/obog.html
     - name: FAQ
       link: /message/faq.html
-    - name: 卒業生の活躍
-      link: /message/obog.html
 - name: トピックス
   link: /topics/
