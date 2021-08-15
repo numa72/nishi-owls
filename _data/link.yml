@@ -1,0 +1,144 @@
+- title: 都立西高
+  items:
+    - name: 東京都立西高等学校
+      url: http://www.nishi-h.metro.tokyo.jp/
+    - name: 東京都立西高等学校同窓会
+      url: https://nishi-doso.jp/
+- title: アメリカンフットボール団体
+  items:
+    - name: アメリカンフットボール協会
+      url: https://americanfootball.jp/
+    - name: 関東学生アメリカンフットボール連盟
+      url: http://www.kcfa.jp/
+    - name: 関西学生アメリカンフットボール連盟
+      url: http://www.kansai-football.jp/
+    - name: 関東高等学校アメリカンフットボール連盟
+      url: http://kantokoukou-football.com/cms/
+    - name: 関西高等学校アメリカンフットボール連盟
+      url: http://www.kansaikoukou-football.com/
+    - name: 東京都高等学校体育連盟アメリカンフットボール専門部
+      url: https://tokyo-americanfootball.com/
+    - name: 日本社会人アメリカンフットボールアメリカンフットボールXリーグ
+      url: https://xleague.jp/
+- title: 関東大学リーグ所属チーム Top 8
+  items:
+    - name: 早稲田大学
+      url: http://bigbears.org/
+    - name: 法政大学
+      url: https://www.hoseiorange.jp/football
+    - name: 中央大学
+      url: http://cu-raccoons.com/
+    - name: 明治大学
+      url: https://www.meiji-griffins.net/
+    - name: 立教大学
+      url: https://www.rushersfootball.jp/
+    - name: 東京大学
+      url: http://www.tokyowarriors.com/
+    - name: 日本大学
+      url: https://www.nu-phoenix.net/
+    - name: 桜美林大学
+      url: https://tncfootball.com/
+- title: 関東大学リーグ所属チーム Big 8
+  items:
+    - name: 慶應義塾大学
+      url: http://www.keio-unicorns.com/top.php
+    - name: 日本体育大学
+      url: https://nssu-football.com/
+    - name: 横浜国立大学
+      url: https://mastiffs.jp/
+    - name: 神奈川大学
+      url: https://www.ku-atoms.org/
+    - name: 明治学院大学
+      url: https://mgu-saints.com/
+    - name: 駒澤大学
+      url: https://ku-bluetide.com/
+    - name: 青山学院大学
+      url: https://agf-lightning-officialhp.jimdofree.com/
+    - name: 国士舘大学
+      url: https://www.k-rhinoceros.com/
+- title: 関西大学チーム
+  items:
+    - name: 立命館大学
+      url: http://www.ritsumeikanpanthers.com/
+    - name: 関西学院大学
+      url: http://www.kgfighters.com/
+    - name: 神戸大学
+      url: http://ravens-kobe.com/
+    - name: 関西大学
+      url: https://www.ku-kaisers.com/
+    - name: 京都大学
+      url: http://gangsters-web.com/
+    - name: 近畿大学
+      url: http://devils.jp/
+    - name: 同志社大学
+      url: http://www.wildrover-net.com/
+    - name: 桃山学院大学
+      url: https://www.st-andrew-afc.com/
+- title: その他大学チーム
+  items:
+    - name: 一橋大学
+      url: https://crimsonfootball.jp/
+    - name: 東京工業大学
+      url: https://titech-buffaloes.com/
+    - name: 北海道大学
+      url: https://biggreen-hu.jimdofree.com/
+    - name: 東北大学
+      url: http://tohoku-hornets.com/
+    - name: 学芸大学
+      url: http://www.tgu-snails.com/
+- title: Xリーグチーム
+  group_items:
+    - items:
+        - name: 富士通フロンティアーズ
+          url: https://sports.jp.fujitsu.com/frontiers/
+        - name: オービックシーガルズ
+          url: https://www.seagulls.jp/
+        - name: パナソニックインパルス
+          url: https://panasonic.co.jp/ls/go-go-impulse/
+        - name: エレコム神戸ファイニーズ
+          url: http://www.finies.com/
+        - name: IBM BigBlue
+          url: http://www.bigblue-football.com/
+        - name: 東京ガスクリエイターズ
+          url: https://tokyogas-creators.com/
+        - name: オール三菱ライオンズ
+          url: http://lions.vc/
+        - name: ノジマ相模原ライズ
+          url: http://www.sagamihara-rise.com/
+    - items:
+        - name: アサヒビールシルバースター
+          url: https://www.asahibeer.co.jp/silver/
+        - name: 明治安田PentaOceanパイレーツ
+          url: https://www.gopiratesnation.com/
+        - name: 富士ゼロックスミネルヴァAFC
+          url: https://www.minerva-afc.com/
+        - name: 警視庁イーグルス
+          url: https://www.keishicho.metro.tokyo.jp/about_mpd/shokai/katsudo/kidotai/kidotai/dai9kidotai.html
+    - items:
+        - name: ディアーズフットボールクラブ
+          url: http://www.deers.jp/
+        - name: 電通キャタピラーズ
+          url: https://dentsucaterpillars.com/
+        - name: ブルザイズ東京
+          url: https://bullseyes.net/
+        - name: BULLSフットボールクラブ
+          url: https://bulls2020.wixsite.com/bullsfootballclub
+    - items:
+        - name: アサヒ飲料クラブチャレンジャーズ
+          url: https://challengers-net.com/
+        - name: イコールワン福岡SUNS
+          url: https://fukuoka-suns.net/
+        - name: 名古屋サイクロンズ
+          url: http://www.cyclones.jp/
+        - name: アズワンブラックイーグルス
+          url: https://www.blackeagles1970.net/
+- title: 都内高校チーム
+  items:
+    - name: 佼成学園
+      url: http://lotus.spo-sta.com/
+    - name: 駒場学園
+      url: http://www.fightinggorillas.com/
+    - name: 都立富士高校
+      url: http://fuji-stallions.com/
+    - name: 明治学院
+      url: http://www.mghs-hepburns.net/

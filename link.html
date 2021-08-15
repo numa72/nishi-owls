@@ -1,0 +1,36 @@
+---
+title: リンク
+---
+
+<style type="text/css" media="screen">
+    ul {
+        margin-bottom: 1em;
+    }
+</style>
+
+{% include breadcrumb.html %}
+
+<h1 id="bg2">リンク</h1>
+
+{% for group in site.data.link %}
+<h2>{{ group.title }}</h2>
+
+{% if group.group_items %}
+
+{% for links in group.group_items %}
+<ul>
+    {% for item in links.items %}
+    <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endfor %}
+
+{% else %}
+<ul>
+    {% for item in group.items %}
+    <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% endfor %}
