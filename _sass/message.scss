@@ -60,6 +60,10 @@
         margin: 1em;
     }
 
+    h2 {
+        clear: both;
+    }
+
     h3 {
         font-size: 120%;
         margin-top: 0.5em;
@@ -67,6 +71,35 @@
 
     p {
         text-indent: 1em;
+    }
+
+    div.image-box {
+        float: right;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 500px;
+        max-width: 50%;
+        box-sizing: border-box;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        @include mq(tablet) {
+            margin-right: 8px; // same as p
+        }
+
+        @include mq(mobile) {
+            margin: 8px 0;
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+
+            img {
+                width: 80%;
+            }
+        }
     }
 }
 
