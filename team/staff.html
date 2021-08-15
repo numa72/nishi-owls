@@ -12,7 +12,7 @@ title: スタッフ
         <h2>{{ staff.name }} ： {{ staff.position }}</h2>
         <div class="staff-main">
             <img src="/assets/images/staff/{% if staff.photo %}{{ staff.photo }}{% else %}no_image.gif{% endif %}"
-                width=150 height=180 alt="顔写真" />
+                width=150 height=180 alt="{{ staff.name }}" />
 
             <dl>
                 {% if staff.year %}
