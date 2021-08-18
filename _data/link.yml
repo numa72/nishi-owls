@@ -74,7 +74,7 @@
       url: http://www.wildrover-net.com/
     - name: 桃山学院大学
       url: https://www.st-andrew-afc.com/
-- title: その他大学チーム
+- title: 主なOBプレイ実績大学
   items:
     - name: 一橋大学
       url: https://crimsonfootball.jp/
@@ -86,6 +86,10 @@
       url: http://tohoku-hornets.com/
     - name: 学芸大学
       url: http://www.tgu-snails.com/
+    - name: 上智大学
+      url: https://sophia-goldeneagles.wixsite.com/ge2016
+    - name: 筑波大学
+      url: http://tsa.tsukuba.ac.jp/football/
 - title: Xリーグチーム
   group_items:
     - items:
@@ -132,7 +136,7 @@
           url: http://www.cyclones.jp/
         - name: アズワンブラックイーグルス
           url: https://www.blackeagles1970.net/
-- title: 都内高校チーム
+- title: 関東高校チーム
   items:
     - name: 麻布学園
       url: http://fightingbee.jp/
@@ -144,3 +148,13 @@
       url: http://fuji-stallions.com/
     - name: 明治学院
       url: http://www.mghs-hepburns.net/
+    - name: 法政大学第二高等学校
+      url: https://www.hosei2football.com/
+    - name: 慶應義塾大学
+      url: http://www.keio-unicorns.com/high/hightoppage.html
+    - name: 横浜高校
+      url: http://www2.yokohama-jsh.ac.jp/mmt/amefuto/index2.htm
+    - name: 立教新座高校
+      url: https://www.localgymsandfitness.com/JP/Niiza-shi/127963767304498/%E7%AB%8B%E6%95%99%E6%96%B0%E5%BA%A7%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E3%83%B3%E3%83%95%E3%83%83%E3%83%88%E3%83%9C%E3%83%BC%E3%83%AB%E9%83%A8
+    - name: 花咲徳栄高校
+      url: https://tokuharu-daffodils.amebaownd.com/
