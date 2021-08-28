@@ -14,7 +14,6 @@
     </div>
 </div>
 
-<!-- TODO add "more" link -->
 <div class="top-games">
     {% if site.data.next-games %}
     <div class="top-games-unit">
@@ -74,13 +73,25 @@
     </div>
 </div>
 
-
 <h2 class="toppage-heading">TOPICS</h2>
 {% assign posts_to_show = "" | split: "" %}
 {% for post in site.posts limit: 6 %}
 {% assign posts_to_show = posts_to_show | push: post %}
 {% endfor %}
 {% include topics_list.html posts=posts_to_show %}
+
+<ul class='top-content-links'>
+    <li style='background-image: url("/assets/images/bg1.jpg")'>
+        <a href="/team/">
+            ABOUT THE TEAM
+        </a>
+    </li>
+    <li style='background-image: url("/assets/images/bg2.jpg")'>
+        <a href="/message/">
+            MESSAGES
+        </a>
+    </li>
+</ul>
 
 <h2 class="toppage-heading">OWLS ソーシャルアカウント</h2>
 <ul class="top-sns-box">
