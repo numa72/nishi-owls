@@ -67,18 +67,24 @@
     h3 {
         font-size: 120%;
         margin-top: 0.5em;
+        margin-left: 25px;
     }
 
     p {
         text-indent: 1em;
         line-height: 1.7;
-        margin: 1.5em 0;
+        margin: 1.5em 25px;
+
+        @include mq(mobile) {
+            margin: 1.5em 0;
+        }
     }
 
     div.image-box {
         float: right;
         margin-top: 10px;
         margin-left: 10px;
+        margin-right: 25px;
         width: 500px;
         max-width: 50%;
         box-sizing: border-box;
