@@ -119,6 +119,18 @@
             }
         }
     }
+
+    p.profile {
+        text-indent: 0;
+        color: #555555;
+        font-size: 75%;
+
+        .profile-title {
+            font-weight: bold;
+            color: black;
+            font-size: 130%;
+        }
+    }
 }
 
 // TODO share some logic with .staff-list
