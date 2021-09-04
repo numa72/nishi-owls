@@ -82,14 +82,25 @@
         }
 
         .staff-content {
+            margin-top: 1em;
+
             p {
                 margin: 0.3em 0;
                 font-size: 90%;
+                padding: 0;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
             }
 
             h3 {
                 color: #701301;
             }
+        }
+
+        .staff-main + .staff-content {
+            margin-top: 0;
         }
     }
 }
