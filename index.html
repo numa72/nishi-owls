@@ -1,7 +1,7 @@
 ---
 ---
 
-<script type="text/javascript" src="/assets/js/slide.js"></script>
+<script src="/assets/js/slide.js"></script>
 <div id="slideGalley">
     <ul class="slide">
         {% for item in site.data.slide %}
@@ -9,8 +9,8 @@
         {% endfor %}
     </ul>
     <div class="nav">
-        <img src="/assets/images/nav_prev.png" class="prev">
-        <img src="/assets/images/nav_next.png" class="next">
+        <img src="/assets/images/nav_prev.png" class="prev" alt="previous">
+        <img src="/assets/images/nav_next.png" class="next" alt="next">
     </div>
 </div>
 
@@ -45,9 +45,9 @@
             <span>RECENT GAMES</span>
         </h2>
         <div class="top-games-container">
-            {% for game in site.games reversed %}
-            {% assign this_year = game.date | date: "%Y" %}
-            {% if this_year == latest_year and latest_game.season == game.season %}
+            {% for game in site.games reversed %}{%
+                assign this_year = game.date | date: "%Y" %}{%
+                    if this_year == latest_year and latest_game.season == game.season %}
             <p>
                 <a href="{{ game.url }}">
                     <span class="sub-info">
@@ -62,8 +62,7 @@
                     </span>
                 </a>
             </p>
-            {% endif %}
-            {% endfor %}
+            {% endif %}{% endfor %}
             <p class="more-link">
                 <a href="/game/">
                     more
@@ -114,5 +113,3 @@
         </a>
     </li>
 </ul>
-
-</div>
