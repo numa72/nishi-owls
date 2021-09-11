@@ -51,23 +51,29 @@
 
     {% feed_meta %}
 
-    {% if page.url == "/" %}
-    <meta name="description" content="都立西高アメフト部OWLS公式HP。チームのプロフィール、歴史、選手とコーチ、試合情報、卒業生の活躍の情報などを発信しています。" />
-
-    <meta property="og:url" content="https://www.nishi-owls.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="都立西高アメリカンフットボール部 OWLS" />
-    <meta property="og:description" content="都立西高アメフト部OWLS公式HP。チームのプロフィール、歴史、選手とコーチ、試合情報、卒業生の活躍の情報などを発信しています。" />
-    <meta property="og:site_name" content="都立西高アメリカンフットボール部 OWLS" />
-    <meta property="og:locale" content="ja_JP" />
-    <meta property="og:image" content="https://www.nishi-owls.com/assets/images/icons/logo-300.png" />
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@nishi__owls" />
-    <meta property="twitter:title" content="都立西高アメリカンフットボール部 OWLS" />
-    <meta property="twitter:description" content="都立西高アメフト部OWLS公式HP。チームのプロフィール、歴史、選手とコーチ、試合情報、卒業生の活躍の情報などを発信しています。" />
-    <meta property="twitter:image" content="https://www.nishi-owls.com/assets/images/icons/logo-300.png" />
+    <!-- Socials -->
+    {% if page.social_image %}{% assign social_image_url = "https://www.nishi-owls.com" | append: page.social_image %}
+    {% else %}{% assign social_image_url = "https://www.nishi-owls.com/assets/images/icons/logo-300.png" %}{% endif %}
+    {% if page.social_description %}
+    <meta name="description" content="{{ page.social_description }}" />
     {% endif %}
+
+    <meta property="og:url" content="https://www.nishi-owls.com{{ page.url }}" />
+    <meta property="og:title" content="{{ title }}" />
+    {% if page.social_description %}
+    <meta property="og:description" content="{{ page.social_description }}" />
+    {% endif %}
+    <meta property="og:site_name" content="都立西高アメリカンフットボール部 OWLS ホームページ" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:image" content="{{ social_image_url }}" />
+
+    <meta name="twitter:card" content="{% if page.social_image %}summary_large_image{% else %}summary{% endif %}" />
+    <meta name="twitter:site" content="@nishi__owls" />
+    <meta property="twitter:title" content="{{ title }}" />
+    {% if page.social_description %}
+    <meta property="twitter:description" content="{{ page.social_description }}" />
+    {% endif %}
+    <meta property="twitter:image" content="{{ social_image_url }}" />
 </head>
 
 <body>
