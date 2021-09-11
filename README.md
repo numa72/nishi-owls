@@ -1,5 +1,15 @@
 # OWLS Homepage
+## 1.環境構築
+当サイトは Jekyll で構築されています。  
+ローカル環境で実行するには Jekyll をインストールしてください。
 
+[Jekyllのチュートリアル](http://jekyllrb-ja.github.io/docs/step-by-step/01-setup/) のステップ1から10全てを実施するのを推奨します。
+
+尚、ステップ1の「インストール」でRubyをインストールする際は最新のver3.0ではなくver2.7をインストールしてください。(3.0だとサイトのビルド時にエラーが発生します。)   
+rbenv使用時はnishi-owls/.ruby-versionのver指定が反映されますが、rbenvを使用しない環境では気を付けてください。  
+特にデフォルトではrbenvが使用できないWindowsでは要注意です。
+
+## 2.ローカル環境でサイトを実行する
 To run locally:
 
 ```
