@@ -3,8 +3,7 @@
 当サイトは Jekyll で構築されています。  
 ローカル環境で実行するには Jekyll をインストールしてください。
 
-jekyllのチュートリアルは[こちら](http://jekyllrb-ja.github.io/docs/step-by-step/01-setup/)になります。  
-サイト運営のためにチュートリアルのステップ1から10全てを実施するのを推奨します。
+[Jekyllのチュートリアル](http://jekyllrb-ja.github.io/docs/step-by-step/01-setup/) のステップ1から10全てを実施するのを推奨します。
 
 尚、ステップ1の「インストール」では、説明に登場するソフト以外に下記ソフトのインストールが必要です。  
 (下記ソフトの内、Windows環境でない場合はwdmは不要です。)
