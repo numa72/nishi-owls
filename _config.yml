@@ -44,6 +44,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+kramdown:
+  hard_wrap: true
+
 exclude:
   - assets_data/
   - Gemfile
