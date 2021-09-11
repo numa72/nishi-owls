@@ -5,21 +5,9 @@
 
 [Jekyllのチュートリアル](http://jekyllrb-ja.github.io/docs/step-by-step/01-setup/) のステップ1から10全てを実施するのを推奨します。
 
-尚、ステップ1の「インストール」では、説明に登場するソフト以外に下記ソフトのインストールが必要です。  
-(下記ソフトの内、Windows環境でない場合はwdmは不要です。)
-
-```
-gem install jekyll-watch webrick wdm
-```
-
-インストール後、下記の依存関係をチュートリアルで作成したGemfileに追記してください。  
-(インストールしていない場合は、wdmは追記不要です。)
-
-```
-gem "jekyll-watch"
-gem "webrick"
-gem "wdm"
-```
+尚、ステップ1の「インストール」でRubyをインストールする際は最新のver3.0ではなくver2.7をインストールしてください。(3.0だとサイトのビルド時にエラーが発生します。)   
+rbenv使用時はnishi-owls/.ruby-versionのver指定が反映されますが、rbenvを使用しない環境では気を付けてください。  
+特にデフォルトではrbenvが使用できないWindowsでは要注意です。
 
 ## 2.ローカル環境でサイトを実行する
 To run locally:
