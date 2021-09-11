@@ -1,20 +1,20 @@
 # OWLS Homepage
-## 1.Setup environment
-This site is made by jekyll.
-To run locally, you have to install jekyll.
+## 1.環境構築
+当サイトはjekyllで構築されています。  
+ローカル環境で実行するにはjekyllをインストールしてください。
 
-Tutorial for jekyll is [here](http://jekyllrb-ja.github.io/docs/step-by-step/01-setup/).
-We recommend to do the tutorial from step 1 to 10 for the site management.
+jekyllのチュートリアルは[こちら](http://jekyllrb-ja.github.io/docs/step-by-step/01-setup/)になります。  
+サイト運営のためにチュートリアルのステップ1から10全てを実施するのを推奨します。
 
-At tutorial's step 1 "Install", install following softs in addtion to those in this section.  
-(If your local is not Windows, wdm is not needed.)
+尚、ステップ1の「インストール」では、説明に登場するソフト以外に下記ソフトのインストールが必要です。  
+(下記ソフトの内、Windows環境でない場合はwdmは不要です。)
 
 ```
 gem install jekyll-watch webrick wdm
 ```
 
-After installing, add following dependencies to your Gemfile.  
-(If wdm is not installed, wdm is not need.)
+インストール後、下記の依存関係をチュートリアルで作成したGemfileに追記してください。  
+(インストールしていない場合は、wdmは追記不要です。)
 
 ```
 gem "jekyll-watch"
@@ -22,7 +22,7 @@ gem "webrick"
 gem "wdm"
 ```
 
-## 2.Run this site locally
+## 2.ローカル環境でサイトを実行する
 To run locally:
 
 ```
