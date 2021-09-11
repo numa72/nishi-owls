@@ -1,7 +1,7 @@
 # OWLS Homepage
 ## 1.環境構築
-当サイトはjekyllで構築されています。  
-ローカル環境で実行するにはjekyllをインストールしてください。
+当サイトは Jekyll で構築されています。  
+ローカル環境で実行するには Jekyll をインストールしてください。
 
 jekyllのチュートリアルは[こちら](http://jekyllrb-ja.github.io/docs/step-by-step/01-setup/)になります。  
 サイト運営のためにチュートリアルのステップ1から10全てを実施するのを推奨します。
