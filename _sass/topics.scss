@@ -96,7 +96,120 @@
     width: 80%;
     margin: 1em auto 3em;
 
+    p.footnote {
+        text-indent: -1em;
+        padding-left: 2em;
+        color: #555555;
+        font-size: 75%;
+    }
+
     @include mq(mobile) {
         width: 90%;
+    }
+}
+
+.topics-content.visit-obog {
+    width: 100%;
+
+    .topic-heading {
+        padding-left: 10%;
+        @include mq(mobile) {
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .topic-lead {
+            // TODO something more stylish.
+        }
+
+        .topic-title {
+            font-size: 300%;
+            font-size: min(300%, 7vw);
+            margin-top: 1em;
+            margin-bottom: 2em;
+            font-family: "Noto Serif JP", serif;
+            font-weight: bold;
+        }
+    }
+
+    p {
+        width: 80%;
+        @include mq(mobile) {
+            width: 90%;
+        }
+        margin: 1em auto;
+        line-height: 1.8;
+        color: #222;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",
+            sans-serif;
+    }
+
+    h3 {
+        margin-left: 8%;
+        @include mq(mobile) {
+            margin-left: 0;
+        }
+        text-indent: -1em;
+        padding-left: 1em;
+        font-size: 250%;
+        font-size: min(250%, 4.9vw);
+        font-family: "Noto Serif JP", serif;
+        font-weight: bold;
+        white-space: nowrap;
+
+        padding-top: 2em;
+
+        clear: both;
+    }
+
+    .image-box {
+        &:before {
+            height: 0;
+            visibility: hidden;
+            content: "";
+            display: block;
+            clear: both;
+        }
+        &.right {
+            float: right;
+            padding-left: 2em;
+            margin-right: 10%;
+        }
+        &.left {
+            float: left;
+            padding-right: 2em;
+            margin-left: 10%;
+        }
+
+        width: 40%;
+        box-sizing: border-box;
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
+
+        font-size: 80%;
+        color: #555;
+
+        strong {
+            color: black;
+            font-size: 120%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        @include mq(mobile) {
+            margin: 1em auto;
+            width: 80%;
+            box-sizing: border-box;
+
+            &.right,
+            &.left {
+                padding-right: 0;
+                padding-left: 0;
+                float: none;
+            }
+        }
     }
 }
