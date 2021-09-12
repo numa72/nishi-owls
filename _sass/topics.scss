@@ -132,10 +132,12 @@
         }
     }
 
-    p {
+    p,
+    dl {
         width: 80%;
         @include mq(mobile) {
-            width: 90%;
+            width: 100%;
+            box-sizing: border-box;
         }
         margin: 1em auto;
         line-height: 1.8;
@@ -180,6 +182,9 @@
             padding-right: 2em;
             margin-left: 10%;
         }
+        &.w200 {
+            max-width: 200px;
+        }
 
         width: 40%;
         box-sizing: border-box;
@@ -206,10 +211,74 @@
 
             &.right,
             &.left {
+                margin: 0 auto;
                 padding-right: 0;
                 padding-left: 0;
                 float: none;
             }
+        }
+    }
+
+    .column {
+        width: 70%;
+        margin: 3em auto;
+        border: #701301 2px solid;
+        position: relative;
+        box-sizing: border-box;
+
+        @include mq(mobile) {
+            width: 85%;
+        }
+
+        h3 {
+            padding-top: max(1em, 2rem);
+            margin-left: 0.5em;
+            @include mq(mobile) {
+                margin-left: 0;
+            }
+        }
+
+        h4 {
+            font-size: 200%;
+            margin-left: 1.5em;
+            @include mq(mobile) {
+                margin-left: 5px;
+            }
+        }
+
+        p,
+        dl {
+            margin-left: 3em;
+            margin-right: 3em;
+            width: unset;
+            @include mq(mobile) {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 0 5px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        dl {
+            dt {
+                font-weight: bold;
+            }
+            dd {
+                margin-bottom: 0.7em;
+            }
+        }
+
+        &:before {
+            content: "COLUMN";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #701301;
+            color: white;
+            padding: 0 5px;
+            font-weight: bold;
         }
     }
 }
