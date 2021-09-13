@@ -28,7 +28,7 @@
     {% elsif page.collection == "staffs" %}
     {% assign title = page.name | append: " （" | append: page.position | append: "） | " | append: site.title %}
     {% else %}
-    {% assign title = page.title | append: " | " | append: site.title %}
+    {% assign title = page.title | replace: '<br/>', ' '  | replace: '<br />', ' '  | replace: '<br>', ' ' | append: " | " | append: site.title %}
     {% endif %}
     <title>{{ title }}</title>
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
