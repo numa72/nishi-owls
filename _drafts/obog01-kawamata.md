@@ -143,7 +143,7 @@ OB会活動が今以上に盛り上がることで、もっともっと現役世
 <h4>“疾風に勁草を知る”</h4>
 
 <div class="image-box right w200">
-    <img src="/assets/images/topics/2021/kawamata/column.jpg" alt="OWLSの未来について語る川俣氏">
+    <img src="/assets/images/topics/2021/kawamata/column.jpg" alt="疾風に勁草を知る" style="border: black 1px solid; box-shadow: 3px 2px 2px silver">
 </div>
 
 <dl>
