@@ -65,7 +65,7 @@
     margin: 1em auto 1.5em;
     display: flex;
 
-    @include mq(mobile) {
+    @include mq(tablet) {
         width: 90%;
     }
 
@@ -113,6 +113,9 @@
 
     .topic-heading {
         padding-left: 10%;
+        @include mq(tablet) {
+            padding-left: 5%;
+        }
         @include mq(mobile) {
             padding-left: 0;
             text-align: center;
@@ -135,6 +138,9 @@
     p,
     dl {
         width: 80%;
+        @include mq(tablet) {
+            width: 90%;
+        }
         @include mq(mobile) {
             width: 100%;
             box-sizing: border-box;
@@ -148,6 +154,9 @@
 
     h3 {
         margin-left: 8%;
+        @include mq(tablet) {
+            margin-left: 3%;
+        }
         @include mq(mobile) {
             margin-left: 0;
         }
@@ -176,11 +185,17 @@
             float: right;
             padding-left: 2em;
             margin-right: 10%;
+            @include mq(tablet) {
+                margin-right: 5%;
+            }
         }
         &.left {
             float: left;
             padding-right: 2em;
             margin-left: 10%;
+            @include mq(tablet) {
+                margin-left: 5%;
+            }
         }
         &.w200 {
             max-width: 200px;
@@ -226,7 +241,7 @@
         position: relative;
         box-sizing: border-box;
 
-        @include mq(mobile) {
+        @include mq(tablet) {
             width: 85%;
         }
 
