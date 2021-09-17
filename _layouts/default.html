@@ -32,7 +32,7 @@
     {% else %}
     {% assign title = page.title | replace: '<br/>', ' '  | replace: '<br />', ' '  | replace: '<br>', ' ' | append: " | " | append: site.title %}
     {% endif %}
-    <title>{{ title }}</title>
+    <title>{% if jekyll.environment != "production" %}[DEV] {% endif %}{{ title }}</title>
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
     <script src="/assets/js/Tocca.min.js"></script>
     <script src="/assets/js/main.js"></script>
@@ -56,13 +56,13 @@
     {% feed_meta %}
 
     <!-- Socials -->
-    {% if page.social_image %}{% assign social_image_url = "https://www.nishi-owls.com" | append: page.social_image %}
-    {% else %}{% assign social_image_url = "https://www.nishi-owls.com/assets/images/icons/logo-300.png" %}{% endif %}
+    {% if page.social_image %}{% assign social_image_url = site.url | append: page.social_image %}
+    {% else %}{% assign social_image_url = site.url | append: "/assets/images/icons/logo-300.png" %}{% endif %}
     {% if page.social_description %}
     <meta name="description" content="{{ page.social_description }}" />
     {% endif %}
 
-    <meta property="og:url" content="https://www.nishi-owls.com{{ page.url }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     <meta property="og:title" content="{{ title }}" />
     {% if page.social_description %}
     <meta property="og:description" content="{{ page.social_description }}" />
