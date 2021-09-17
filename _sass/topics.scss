@@ -153,17 +153,15 @@
     }
 
     h3 {
-        margin-left: 8%;
+        margin-left: 10%;
         @include mq(tablet) {
-            margin-left: 3%;
+            margin-left: 5%;
         }
         @include mq(mobile) {
-            margin-left: 0;
+            margin-left: 8px;
         }
-        text-indent: -1em;
-        padding-left: 1em;
         font-size: 250%;
-        font-size: min(250%, 4.9vw);
+        font-size: min(250%, 5vw);
         font-family: "Noto Serif JP", serif;
         font-weight: bold;
         white-space: nowrap;
@@ -174,13 +172,6 @@
     }
 
     .image-box {
-        &:before {
-            height: 0;
-            visibility: hidden;
-            content: "";
-            display: block;
-            clear: both;
-        }
         &.right {
             float: right;
             padding-left: 2em;
@@ -249,7 +240,7 @@
             padding-top: max(1em, 2rem);
             margin-left: 0.5em;
             @include mq(mobile) {
-                margin-left: 0;
+                margin-left: 5px;
             }
         }
 
