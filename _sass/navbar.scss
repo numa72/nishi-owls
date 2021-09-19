@@ -40,13 +40,21 @@ $sub-item-height: 40px;
             padding-top: 5px;
             padding-bottom: 5px;
             border-bottom: solid 5px #c00000;
-            // TODO use css instead of image.
-            background-image: url("/assets/images/tirangle-for-nav-bar.png");
-            background-repeat: no-repeat;
-            background-position: center bottom;
 
             &:hover {
                 border-bottom-color: #fcb103;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                left: 48%;
+                bottom: -3px;
+                border-style: solid;
+                border-color: transparent;
+                border-top-color: white;
+                border-width: 10px 6px;
+                width: 0;
+                height: 0;
             }
         }
 
