@@ -1,6 +1,7 @@
 title: 都立西高アメリカンフットボール部 OWLS
 description: 東京都立西高等学校アメリカンフットボール部 OWLS 公式HPです。試合情報、OB・OGの情報などを発信しています。
 lang: ja_JP
+url: https://www.nishi-owls.com
 
 twitter:
   username: nishi__owls
@@ -43,6 +44,9 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+kramdown:
+  hard_wrap: true
 
 exclude:
   - assets_data/

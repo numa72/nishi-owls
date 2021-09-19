@@ -65,7 +65,7 @@
     margin: 1em auto 1.5em;
     display: flex;
 
-    @include mq(mobile) {
+    @include mq(tablet) {
         width: 90%;
     }
 
@@ -96,7 +96,199 @@
     width: 80%;
     margin: 1em auto 3em;
 
+    p.footnote {
+        text-indent: -1em;
+        padding-left: 2em;
+        color: #555555;
+        font-size: 75%;
+    }
+
     @include mq(mobile) {
         width: 90%;
+    }
+}
+
+.topics-content.visit-obog {
+    width: 100%;
+
+    .topic-heading {
+        padding-left: 10%;
+        @include mq(tablet) {
+            padding-left: 5%;
+        }
+        @include mq(mobile) {
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .topic-lead {
+            // TODO something more stylish.
+        }
+
+        .topic-title {
+            font-size: 300%;
+            font-size: min(300%, 7vw);
+            margin-top: 1em;
+            margin-bottom: 2em;
+            font-family: "Noto Serif JP", serif;
+            font-weight: bold;
+        }
+    }
+
+    p,
+    dl {
+        width: 80%;
+        @include mq(tablet) {
+            width: 90%;
+        }
+        @include mq(mobile) {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        margin: 1em auto;
+        line-height: 1.8;
+        color: #222;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",
+            sans-serif;
+    }
+
+    h3 {
+        margin-left: 10%;
+        @include mq(tablet) {
+            margin-left: 5%;
+        }
+        @include mq(mobile) {
+            margin-left: 8px;
+        }
+        font-size: 250%;
+        font-size: min(250%, 5vw);
+        font-family: "Noto Serif JP", serif;
+        font-weight: bold;
+        white-space: nowrap;
+
+        padding-top: 2em;
+
+        clear: both;
+    }
+
+    sup {
+        font-size: 75%;
+    }
+
+    .image-box {
+        &.right {
+            float: right;
+            padding-left: 2em;
+            margin-right: 10%;
+            @include mq(tablet) {
+                margin-right: 5%;
+            }
+        }
+        &.left {
+            float: left;
+            padding-right: 2em;
+            margin-left: 10%;
+            @include mq(tablet) {
+                margin-left: 5%;
+            }
+        }
+        &.w200 {
+            max-width: 200px;
+        }
+
+        width: 40%;
+        box-sizing: border-box;
+        padding-top: 1.25em;
+        padding-bottom: 2em;
+
+        font-size: 80%;
+        color: #555;
+
+        strong {
+            color: black;
+            font-size: 120%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        @include mq(mobile) {
+            margin: 1em auto;
+            width: 80%;
+            box-sizing: border-box;
+
+            &.right,
+            &.left {
+                margin: 0 auto;
+                padding-right: 0;
+                padding-left: 0;
+                float: none;
+            }
+        }
+    }
+
+    .column {
+        width: 70%;
+        margin: 3em auto;
+        border: #701301 2px solid;
+        position: relative;
+        box-sizing: border-box;
+
+        @include mq(tablet) {
+            width: 85%;
+        }
+
+        h3 {
+            padding-top: max(1em, 2rem);
+            margin-left: 0.5em;
+            @include mq(mobile) {
+                margin-left: 5px;
+            }
+        }
+
+        h4 {
+            font-size: 150%;
+            margin-left: 1.5em;
+            @include mq(mobile) {
+                margin-left: 5px;
+            }
+        }
+
+        p,
+        dl {
+            margin-left: 3em;
+            margin-right: 3em;
+            width: unset;
+            @include mq(mobile) {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 0 5px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        dl {
+            dt {
+                font-weight: bold;
+            }
+            dd {
+                margin-bottom: 0.7em;
+            }
+        }
+
+        &:before {
+            content: "COLUMN";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #701301;
+            color: white;
+            padding: 0 30px;
+            font-weight: bold;
+        }
     }
 }
