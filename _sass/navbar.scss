@@ -47,7 +47,8 @@ $sub-item-height: 40px;
             &:after {
                 content: "";
                 position: absolute;
-                left: 48%;
+                left: 50%;
+                margin-left: -4.5px;
                 bottom: -3px;
                 border-style: solid;
                 border-color: transparent;
