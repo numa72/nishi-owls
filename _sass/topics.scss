@@ -154,12 +154,6 @@
 
     h3 {
         margin-left: 10%;
-        @include mq(tablet) {
-            margin-left: 5%;
-        }
-        @include mq(mobile) {
-            margin-left: 8px;
-        }
         font-size: 250%;
         font-size: min(250%, 5vw);
         font-family: "Noto Serif JP", serif;
@@ -169,6 +163,14 @@
         padding-top: 2em;
 
         clear: both;
+
+        @include mq(tablet) {
+            margin-left: 5%;
+        }
+        @include mq(mobile) {
+            margin-left: 8px;
+            font-weight: 900;
+        }
     }
 
     sup {
