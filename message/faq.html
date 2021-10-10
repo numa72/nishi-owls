@@ -19,10 +19,7 @@ title: FAQ
     <div class="faq-box" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
         <h3 itemprop="name">{{item.question}}</h3>
         <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            {% capture answer %}
-            <p itemprop="text">{{item.answer}}</p>
-            {% endcapture %}
-            {{ answer | newline_to_br }}
+            <p itemprop="text">{{ item.answer | newline_to_br }}</p>
         </div>
     </div>
     {% endfor %}
