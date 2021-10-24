@@ -1,11 +1,6 @@
 <!doctype html>
-<<<<<<< HEAD
 {% if page.microdarta_html_type %}
-<html lang="ja" itemscope itemtype="{{ page.microdarta_html_type }}">
-=======
-{% if page.microdarta_html_type == 'FAQ' %}
-<html lang="ja" itemscope itemtype="https://schema.org/FAQPage">
->>>>>>> 6365dc932e93ee8dfe55d7ee91040bdae9a51144
+<html itemscope itemtype="{{ page.microdarta_html_type }}">
 {% else %}
 <html lang="ja">
 {% endif %}
@@ -39,7 +34,8 @@
     {% elsif page.collection == "staffs" %}
     {% assign title = page.name | append: " （" | append: page.position | append: "） | " | append: site.title %}
     {% else %}
-    {% assign title = page.title | replace: '<br/>', ' '  | replace: '<br />', ' '  | replace: '<br>', ' ' | append: " | " | append: site.title %}
+    {% assign title = page.title | replace: '<br />', ' ' | replace: '<br />', ' ' | replace: '<br>', ' ' | append: " |
+    " | append: site.title %}
     {% endif %}
     <title>{% if jekyll.environment != "production" %}[DEV] {% endif %}{{ title }}</title>
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
