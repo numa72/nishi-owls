@@ -1,6 +1,6 @@
 <!doctype html>
-{% if page.title == 'FAQ' %}
-<html lang="ja" itemscope itemtype="https://schema.org/FAQPage">
+{% if page.microdarta_html_type %}
+<html lang="ja" itemscope itemtype="{{ page.microdarta_html_type }}">
 {% else %}
 <html lang="ja">
 {% endif %}
