@@ -36,14 +36,14 @@ layout: default
 {% endfor %}
 
 <div class="topics-navigation">
-    {% if p_post %}
+    {% if p_post and p_post.published %}
     <a href="{{p_post.url}}" class="prev">
         &laquo; 前の {{ site.data.topics-tags[tag].name }} の記事<br />
         {{ p_post.title }}
     </a>
     {% endif %}
 
-    {% if n_post %}
+    {% if n_post and n_post.published %}
     <a href="{{n_post.url}}" class="next">
         次の {{ site.data.topics-tags[tag].name }} の記事 &raquo;<br />
         {{ n_post.title }}
