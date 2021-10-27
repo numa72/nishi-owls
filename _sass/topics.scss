@@ -115,6 +115,9 @@ $mobile-content-width: 90%;
     width: $desktop-content-width;
 
     margin: 1em auto;
+
+    clear: both;
+
     a {
         display: block;
         box-sizing: border-box;
